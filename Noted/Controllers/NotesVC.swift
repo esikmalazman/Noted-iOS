@@ -22,6 +22,7 @@ class NotesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToolBar()
+        notesTitle.becomeFirstResponder()
     }
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {

@@ -21,6 +21,8 @@
 		7FA12F12267DECD8004A1A4A /* ViewNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */; };
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
+		7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF85DCE267E171D00905755 /* CustomNotedCell.swift */; };
+		7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF85DCF267E171D00905755 /* CustomNotedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotesVC.swift; sourceTree = "<group>"; };
 		7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
+		7FF85DCE267E171D00905755 /* CustomNotedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotedCell.swift; sourceTree = "<group>"; };
+		7FF85DCF267E171D00905755 /* CustomNotedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNotedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				7F8E4238267DD8910066B816 /* Main.storyboard */,
 				7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */,
 				7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */,
+				7FF85DCE267E171D00905755 /* CustomNotedCell.swift */,
+				7FF85DCF267E171D00905755 /* CustomNotedCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */,
+				7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */,
 				7F8E4242267DD8920066B816 /* LaunchScreen.storyboard in Resources */,
 				7F8E423F267DD8920066B816 /* Assets.xcassets in Resources */,
 				7F8E423A267DD8910066B816 /* Main.storyboard in Resources */,
@@ -217,6 +224,7 @@
 				7F8E4237267DD8910066B816 /* BaseVC.swift in Sources */,
 				7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */,
 				7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */,
+				7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */,
 				7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

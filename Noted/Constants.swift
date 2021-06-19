@@ -10,6 +10,7 @@ import UIKit
 struct Constants {
 
     static let cellIdentifierNote = "noteCell"
+    static let customCellIdentifierNote = "customNoteCell"
     static let goToNoteSegue = "goToNote"
 
     struct ToolBarColor {

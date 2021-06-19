@@ -29,6 +29,7 @@ class BaseVC: UIViewController {
 
         // Receive notification if new items added
         NotificationCenter.default.addObserver(self, selector: #selector(loadNotes), name: NSNotification.Name(rawValue: "loadTableView"), object: nil)
+        tableView.register(UINib(nibName: "CustomNotedCell", bundle: nil), forCellReuseIdentifier: Constants.customCellIdentifierNote)
         loadNotes()
     }
 
@@ -59,6 +60,10 @@ extension BaseVC: UITableViewDelegate {
 
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
 }
 
 // MARK: - Table Datasource
@@ -71,11 +76,13 @@ extension BaseVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let listOfNotes = arrayNotes[indexPath.row]
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.customCellIdentifierNote, for: indexPath) as! CustomNotedCell
+        // swiftlint:enable force_cast
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifierNote, for: indexPath)
-        cell.textLabel?.text = listOfNotes.text
-        cell.detailTextLabel?.text = listOfNotes.title
-        cell.backgroundColor = listOfNotes.cellColor
+        cell.titleCell.text = listOfNotes.title
+        cell.subtitleCell.text = listOfNotes.text
+        cell.cellBg.backgroundColor = listOfNotes.cellColor
         return cell
     }
 }
