@@ -9,21 +9,20 @@ import UIKit
 
 class ViewNotesVC: UIViewController {
 
-    var notesTitle : String?
-    var notesText : String?
-    var notesBgColor : UIColor?
-    
+    var notesTitle: String?
+    var notesText: String?
+    var notesBgColor: UIColor?
+
     @IBOutlet weak var viewTitle: UITextField!
     @IBOutlet weak var viewText: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
 
     }
-    
 
-    func setupView(){
+    func setupView() {
         viewTitle.text = notesTitle
         viewText.text = notesText
         view.backgroundColor = notesBgColor

@@ -8,10 +8,10 @@
 import UIKit
 
 struct Constants {
-    
+
     static let cellIdentifierNote = "noteCell"
     static let goToNoteSegue = "goToNote"
-    
+
     struct ToolBarColor {
         static let purple = #colorLiteral(red: 0.6352941176, green: 0.6078431373, blue: 0.9960784314, alpha: 1)
         static let blue = #colorLiteral(red: 0.4549019608, green: 0.7254901961, blue: 1, alpha: 1)
