@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Drc-LB-Rrr" customClass="CustomToolbar" customModule="Noted" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="Purple" id="p20-pV-LkS">
+                    <connections>
+                        <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="WtJ-SC-5TX"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Blue" id="EXD-hR-pbC">
+                    <connections>
+                        <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="mqG-iU-rs7"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Green" id="NcH-na-VIL">
+                    <connections>
+                        <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="yeK-gm-RmB"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Yellow" id="B5C-Gn-Qsf">
+                    <connections>
+                        <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="tZf-Hn-Bfv"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Red" id="e26-Wz-Sev">
+                    <connections>
+                        <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="BC6-Ol-R6Y"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <connections>
+                <outlet property="blueButton" destination="EXD-hR-pbC" id="gVg-D1-hWw"/>
+                <outlet property="greenButton" destination="NcH-na-VIL" id="07h-NI-zIj"/>
+                <outlet property="purpleButton" destination="p20-pV-LkS" id="jEG-kV-4Xj"/>
+                <outlet property="redButton" destination="e26-Wz-Sev" id="60V-U5-phY"/>
+                <outlet property="yellowButton" destination="B5C-Gn-Qsf" id="zDT-5j-rjz"/>
+            </connections>
+            <point key="canvasLocation" x="219" y="80"/>
+        </toolbar>
+    </objects>
+</document>

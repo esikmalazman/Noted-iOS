@@ -15,28 +15,36 @@ class NotesVC: UIViewController {
     @IBOutlet weak var notesTitle: UITextField!
     @IBOutlet weak var notesText: UITextView!
     
+    var selectColor : UIColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupToolBar()
     }
     
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         let newNotes = Note(context: context)
         newNotes.title = notesTitle.text
         newNotes.text = notesText.text
-        newNotes.cellColor = UIColor.green
+        newNotes.cellColor = selectColor
         
         print("New Notes Saved")
         saveNotes()
+        
         //Notify baseVC that new notes added
         NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
         self.navigationController?.popToRootViewController(animated: true)
-       
+    }
+    
+    func setupToolBar(){
+        let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as! CustomToolbar
+        custom.sizeToFit()
+        custom.customDelegate = self
         
+        notesTitle.inputAccessoryView = custom
+        notesText.inputAccessoryView = custom
     }
 }
 
@@ -51,4 +59,18 @@ extension NotesVC{
             print("Error saving context \(error)")
         }
     }
+}
+
+
+//MARK:- Custom ToolBar Delegate
+extension NotesVC : CustomToolBarDelegate {
+    
+    func didSetBackgroundColor(view: Any, with color: UIColor) {
+        selectColor = color
+        notesTitle.backgroundColor = color
+        notesText.backgroundColor = color
+        self.view.backgroundColor = color
+    }
+    
+    
 }

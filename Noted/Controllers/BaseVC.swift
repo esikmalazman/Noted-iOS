@@ -26,12 +26,13 @@ class BaseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+       
         //Receive notification if new items added
         NotificationCenter.default.addObserver(self, selector: #selector(loadNotes), name: NSNotification.Name(rawValue: "loadTableView"), object: nil)
         loadNotes()
     }
+    
+    
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
         //Navigate to NotesVC
@@ -46,6 +47,7 @@ extension BaseVC : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.goToNoteSegue, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

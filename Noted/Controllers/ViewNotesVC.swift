@@ -18,21 +18,17 @@ class ViewNotesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewTitle.text = notesTitle
-        viewText.text = notesText
-        view.backgroundColor = notesBgColor
-        // Do any additional setup after loading the view.
+        setupView()
+
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView(){
+        viewTitle.text = notesTitle
+        viewText.text = notesText
+        view.backgroundColor = notesBgColor
+        viewTitle.backgroundColor = notesBgColor
+        viewText.backgroundColor = notesBgColor
     }
-    */
 
 }
