@@ -17,15 +17,19 @@ class NotesVC: UIViewController {
     @IBOutlet weak var notesTitle: UITextField!
     @IBOutlet weak var notesText: UITextView!
 
-    var selectColor: UIColor?
+    var selectColor: UIColor = Constants.BrandColor.bgColor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToolBar()
+        setupUI()
         notesTitle.becomeFirstResponder()
     }
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+
+        // Notify baseVC that new notes added
+        // NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
 
         let newNotes = Note(context: context)
         newNotes.title = notesTitle.text
@@ -34,12 +38,14 @@ class NotesVC: UIViewController {
 
         print("New Notes Saved")
         saveNotes()
-
-        // Notify baseVC that new notes added
-        NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
         self.navigationController?.popToRootViewController(animated: true)
     }
-
+    func setupUI() {
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.backgroundColor = selectColor
+        view.backgroundColor = selectColor
+        notesText.backgroundColor = selectColor
+    }
     func setupToolBar() {
         guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
         custom.sizeToFit()
@@ -58,7 +64,7 @@ extension NotesVC {
             try context.save()
 
         } catch {
-            print("Error saving context \(error)")
+            print("Error saving context \(error.localizedDescription)")
         }
     }
 }

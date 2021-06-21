@@ -8,39 +8,50 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--BaseVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BaseVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj5-VL-07Z">
-                                <rect key="frame" x="44" y="76" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj5-VL-07Z">
+                                <rect key="frame" x="30" y="20" width="374" height="37"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write what’s on your mind before it get lost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vx-K2-AFM">
-                                <rect key="frame" x="44" y="105" width="327" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write what’s on your mind before it get lost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vx-K2-AFM">
+                                <rect key="frame" x="30" y="67" width="374" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-h3-RzJ">
-                                <rect key="frame" x="44" y="156" width="327" height="585"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-h3-RzJ">
+                                <rect key="frame" x="30" y="125.5" width="354" height="648.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="noteCell" textLabel="fYJ-RT-Zmg" detailTextLabel="Rvi-bW-oIz" style="IBUITableViewCellStyleSubtitle" id="hz1-8e-PDZ">
-                                        <rect key="frame" x="0.0" y="28" width="327" height="56"/>
+                                        <rect key="frame" x="0.0" y="28" width="354" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hz1-8e-PDZ" id="9V0-bc-5VV">
-                                            <rect key="frame" x="0.0" y="0.0" width="296" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYJ-RT-Zmg">
@@ -66,20 +77,42 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="uHn-9T-Bb2"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65F-UU-Uge">
-                                <rect key="frame" x="341" y="849" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18l-bw-rgv">
+                                <rect key="frame" x="314" y="679" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="AN3-G2-sPb"/>
+                                    <constraint firstAttribute="height" constant="65" id="EmV-N2-mdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
+                                <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VvE-Hh-3wp"/>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EtA-yH-q7m"/>
+                                    <segue destination="eGz-wR-Eiv" kind="show" id="r3d-nd-e3h"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mj5-VL-07Z" secondAttribute="trailing" constant="10" id="13p-ax-4NS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="18l-bw-rgv" secondAttribute="bottom" constant="30" id="3KI-Mt-62b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="18l-bw-rgv" secondAttribute="trailing" constant="35" id="9YZ-9x-h49"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vx-K2-AFM" secondAttribute="trailing" constant="10" id="D7p-7Z-kRU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fn0-h3-RzJ" secondAttribute="trailing" constant="30" id="NPb-N9-1Vm"/>
+                            <constraint firstItem="fn0-h3-RzJ" firstAttribute="top" secondItem="4Vx-K2-AFM" secondAttribute="bottom" constant="40" id="PvL-aS-9NP"/>
+                            <constraint firstItem="4Vx-K2-AFM" firstAttribute="top" secondItem="Mj5-VL-07Z" secondAttribute="bottom" constant="10" id="aEe-q8-pjo"/>
+                            <constraint firstItem="4Vx-K2-AFM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dab-Ek-9tS"/>
+                            <constraint firstItem="Mj5-VL-07Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="mM0-6z-GUG"/>
+                            <constraint firstItem="Mj5-VL-07Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rpB-zR-tak"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fn0-h3-RzJ" secondAttribute="bottom" id="xbz-2r-xCa"/>
+                            <constraint firstItem="fn0-h3-RzJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zWc-Tk-4pm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1ot-Ul-q9u"/>
                     <connections>
+                        <outlet property="addButton" destination="18l-bw-rgv" id="Cim-8Z-TF9"/>
+                        <outlet property="baseSubtitle" destination="4Vx-K2-AFM" id="rB7-ty-ZID"/>
+                        <outlet property="baseTitle" destination="Mj5-VL-07Z" id="WcR-w5-Yix"/>
                         <outlet property="tableView" destination="fn0-h3-RzJ" id="KVX-oC-bBB"/>
                         <segue destination="w3f-jy-Dq8" kind="show" identifier="goToNote" id="rhC-fy-A9F"/>
                     </connections>
@@ -93,26 +126,33 @@
             <objects>
                 <viewController id="w3f-jy-Dq8" customClass="ViewNotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TBF-hI-R6v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50O-ka-si1">
-                                <rect key="frame" x="25" y="87" width="364" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50O-ka-si1">
+                                <rect key="frame" x="30" y="30" width="354" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type something.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yzp-NO-zE1">
-                                <rect key="frame" x="25" y="129" width="364" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type something.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yzp-NO-zE1">
+                                <rect key="frame" x="30" y="83.5" width="354" height="700.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="df6-CS-WFN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yzp-NO-zE1" firstAttribute="bottom" secondItem="df6-CS-WFN" secondAttribute="bottom" constant="10" id="33x-2H-UXI"/>
+                            <constraint firstItem="df6-CS-WFN" firstAttribute="trailing" secondItem="50O-ka-si1" secondAttribute="trailing" constant="30" id="4zB-nq-Eg2"/>
+                            <constraint firstItem="yzp-NO-zE1" firstAttribute="leading" secondItem="df6-CS-WFN" secondAttribute="leading" constant="30" id="8bO-9d-BGx"/>
+                            <constraint firstItem="yzp-NO-zE1" firstAttribute="top" secondItem="50O-ka-si1" secondAttribute="bottom" constant="15" id="Oco-G9-rM0"/>
+                            <constraint firstItem="50O-ka-si1" firstAttribute="leading" secondItem="df6-CS-WFN" secondAttribute="leading" constant="30" id="iOO-HN-OzI"/>
+                            <constraint firstItem="df6-CS-WFN" firstAttribute="trailing" secondItem="yzp-NO-zE1" secondAttribute="trailing" constant="30" id="wIH-UR-roL"/>
+                            <constraint firstItem="50O-ka-si1" firstAttribute="top" secondItem="df6-CS-WFN" secondAttribute="top" constant="30" id="zIe-FK-FHP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4qj-ao-y8b"/>
                     <connections>
@@ -122,38 +162,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Mu-ZM-xGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="844"/>
+            <point key="canvasLocation" x="1782.608695652174" y="843.75"/>
         </scene>
         <!--NotesVC-->
         <scene sceneID="Qoa-3t-3ZB">
             <objects>
                 <viewController restorationIdentifier="NotesVC" storyboardIdentifier="NotesVC" id="eGz-wR-Eiv" customClass="NotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tpe-Ok-REI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-Ou-Ia0">
-                                <rect key="frame" x="20" y="127" width="364" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-Ou-Ia0">
+                                <rect key="frame" x="30" y="30" width="354" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type something.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-5c-QL9">
-                                <rect key="frame" x="20" y="169" width="364" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type something.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-5c-QL9">
+                                <rect key="frame" x="30" y="83.5" width="354" height="700.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mzj-Sx-cO2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y9H-5c-QL9" firstAttribute="top" secondItem="Ygt-Ou-Ia0" secondAttribute="bottom" constant="15" id="8Cn-3A-TU1"/>
+                            <constraint firstItem="Y9H-5c-QL9" firstAttribute="leading" secondItem="Mzj-Sx-cO2" secondAttribute="leading" constant="30" id="H45-Eu-JfY"/>
+                            <constraint firstItem="Mzj-Sx-cO2" firstAttribute="trailing" secondItem="Ygt-Ou-Ia0" secondAttribute="trailing" constant="30" id="Ikn-ye-NFH"/>
+                            <constraint firstItem="Mzj-Sx-cO2" firstAttribute="trailing" secondItem="Y9H-5c-QL9" secondAttribute="trailing" constant="30" id="Sf1-K9-ISH"/>
+                            <constraint firstItem="Y9H-5c-QL9" firstAttribute="bottom" secondItem="Mzj-Sx-cO2" secondAttribute="bottom" constant="10" id="WdI-VK-b1v"/>
+                            <constraint firstItem="Ygt-Ou-Ia0" firstAttribute="top" secondItem="Mzj-Sx-cO2" secondAttribute="top" constant="30" id="Yy9-tF-U6A"/>
+                            <constraint firstItem="Ygt-Ou-Ia0" firstAttribute="leading" secondItem="Mzj-Sx-cO2" secondAttribute="leading" constant="30" id="mBM-xL-HiY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7c-oi-Lju">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="w9u-DS-sTz">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="eGz-wR-Eiv" id="A7w-sf-VRD"/>
+                                <action selector="saveButtonPressed:" destination="eGz-wR-Eiv" id="xGk-Mi-wCA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -164,14 +211,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2D-Sw-NL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="112.5"/>
+            <point key="canvasLocation" x="2798.5507246376815" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vxn-Bm-c3B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iBf-k0-aa5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TRj-QF-5YQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="TRj-QF-5YQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -183,24 +230,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdX-Qg-vzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r0v-sH-gEn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="69r-po-6WT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FEL-CM-mAl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eGz-wR-Eiv" kind="relationship" relationship="rootViewController" id="rl3-A6-GYu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDc-J1-BMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1889.8550724637682" y="112.5"/>
         </scene>
     </scenes>
     <resources>

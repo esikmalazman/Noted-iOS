@@ -31,6 +31,8 @@ class CustomNotedCell: UITableViewCell {
 
         cellBg.layer.cornerRadius = 10
         cellBg.layer.masksToBounds = true
+        titleCell.textColor = Constants.BrandColor.notesColor
+        subtitleCell.textColor = Constants.BrandColor.subtitleNotesColor
 
     }
     func customCellSpace() {
