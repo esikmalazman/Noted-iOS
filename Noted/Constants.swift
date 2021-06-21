@@ -25,4 +25,10 @@ struct Constants {
         static let yellow = #colorLiteral(red: 1, green: 0.9176470588, blue: 0.6549019608, alpha: 1)
         static let red = #colorLiteral(red: 0.9803921569, green: 0.6941176471, blue: 0.6274509804, alpha: 1)
     }
+    struct SoundFile {
+        static let createNotes = "create-notes-swoosh-sound"
+        static let deleteNotes = "delete-notes-swoosh-sound"
+        static let saveNotes = "save-notes-bell-sound"
+        static let tapToolBarColor = "tap-toolbar-color-sound"
+    }
 }

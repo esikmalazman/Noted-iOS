@@ -35,7 +35,7 @@ class NotesVC: UIViewController {
         newNotes.title = notesTitle.text
         newNotes.text = notesText.text
         newNotes.cellColor = selectColor
-
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
         print("New Notes Saved")
         saveNotes()
         self.navigationController?.popToRootViewController(animated: true)
@@ -77,6 +77,7 @@ extension NotesVC: CustomToolBarDelegate {
         notesTitle.backgroundColor = color
         notesText.backgroundColor = color
         self.view.backgroundColor = color
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)
     }
 
 }

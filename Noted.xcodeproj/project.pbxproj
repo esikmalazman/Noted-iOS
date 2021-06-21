@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F036F712680CCE400A684C9 /* delete-notes-swoosh-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F702680CCE400A684C9 /* delete-notes-swoosh-sound.wav */; };
+		7F036F752680CDB800A684C9 /* save-notes-bell-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F742680CDB800A684C9 /* save-notes-bell-sound.wav */; };
+		7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F036F772680CE2400A684C9 /* SoundManager.swift */; };
+		7F036F7B2680D07100A684C9 /* create-notes-swoosh-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */; };
+		7F036F802680D2FB00A684C9 /* tap-toolbar-color-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */; };
 		7F793DB6267F37E100AAE31E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */; };
 		7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */; };
 		7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */; };
@@ -30,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F036F702680CCE400A684C9 /* delete-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "delete-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
+		7F036F742680CDB800A684C9 /* save-notes-bell-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "save-notes-bell-sound.wav"; sourceTree = "<group>"; };
+		7F036F772680CE2400A684C9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "create-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
+		7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tap-toolbar-color-sound.wav"; sourceTree = "<group>"; };
 		7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -65,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F036F732680CD1900A684C9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */,
+				7F036F702680CCE400A684C9 /* delete-notes-swoosh-sound.wav */,
+				7F036F742680CDB800A684C9 /* save-notes-bell-sound.wav */,
+				7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		7F793DBB267F37F100AAE31E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +122,7 @@
 				7F8E4257267DDC710066B816 /* Model */,
 				7FA12F0A267DE1E0004A1A4A /* Controllers */,
 				7FA12F0C267DE1E6004A1A4A /* View */,
+				7F036F732680CD1900A684C9 /* Sounds */,
 				7F793DBB267F37F100AAE31E /* Fonts */,
 				7F8E423E267DD8920066B816 /* Assets.xcassets */,
 				7F8E4243267DD8920066B816 /* Info.plist */,
@@ -124,6 +146,7 @@
 				7F8E4236267DD8910066B816 /* BaseVC.swift */,
 				7FA12F0E267DE325004A1A4A /* NotesVC.swift */,
 				7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */,
+				7F036F772680CE2400A684C9 /* SoundManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,13 +224,17 @@
 			files = (
 				7F793DB6267F37E100AAE31E /* Montserrat-Regular.ttf in Resources */,
 				7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */,
+				7F036F7B2680D07100A684C9 /* create-notes-swoosh-sound.wav in Resources */,
 				7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */,
 				7F8E4242267DD8920066B816 /* LaunchScreen.storyboard in Resources */,
 				7F8E423F267DD8920066B816 /* Assets.xcassets in Resources */,
+				7F036F802680D2FB00A684C9 /* tap-toolbar-color-sound.wav in Resources */,
 				7F8E423A267DD8910066B816 /* Main.storyboard in Resources */,
+				7F036F712680CCE400A684C9 /* delete-notes-swoosh-sound.wav in Resources */,
 				7F793DB9267F37E100AAE31E /* Montserrat-SemiBold.ttf in Resources */,
 				7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */,
 				7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */,
+				7F036F752680CDB800A684C9 /* save-notes-bell-sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +271,7 @@
 				7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */,
 				7FA12F12267DECD8004A1A4A /* ViewNotesVC.swift in Sources */,
 				7FA12F0F267DE325004A1A4A /* NotesVC.swift in Sources */,
+				7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */,
 				7F8E423D267DD8910066B816 /* Noted.xcdatamodeld in Sources */,
 				7F8E4237267DD8910066B816 /* BaseVC.swift in Sources */,
 				7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */,

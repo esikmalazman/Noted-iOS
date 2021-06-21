@@ -40,7 +40,7 @@ class BaseVC: UIViewController {
     }
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
-
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
         // Navigate to NotesVC
         // guard let notesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NotesVC") as? NotesVC else {return}
         // self.navigationController?.pushViewController(notesVC, animated: true)
@@ -72,6 +72,7 @@ extension BaseVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.goToNoteSegue, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -92,7 +93,7 @@ extension BaseVC: UITableViewDelegate {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
 
             let notesToRemove = self.arrayNotes[indexPath.row]
-
+            SoundManager.shared.playSound(soundFileName: Constants.SoundFile.deleteNotes)
             self.context.delete(notesToRemove)
             self.saveNotes()
             self.loadNotes()
@@ -120,6 +121,7 @@ extension BaseVC: UITableViewDataSource {
         cell.titleCell.text = listOfNotes.title
         cell.subtitleCell.text = listOfNotes.text
         cell.cellBg.backgroundColor = listOfNotes.cellColor
+        cell.selectionStyle = .none
         return cell
     }
 }
