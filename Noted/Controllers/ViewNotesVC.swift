@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewNotesVC: UIViewController {
 
@@ -23,11 +24,19 @@ class ViewNotesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        setupToolBar()
     }
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        editButton.title = "Save"
-        // TODO: Add save function context here
+
+        if editButton.title == "Edit" {
+            editButton.title = "Save"
+            viewTitle.becomeFirstResponder()
+        } else {
+            editButton.title = "Edit"
+            updateNotes(with: notesTitle!, newTitle: viewTitle.text!, newText: viewText.text, newColor: view.backgroundColor!)
+            SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 
     func setupView() {
@@ -40,17 +49,46 @@ class ViewNotesVC: UIViewController {
         viewText.delegate = self
         viewTitle.delegate = self
     }
+    func setupToolBar() {
+        guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
+        custom.sizeToFit()
+        custom.customDelegate = self
 
+        viewText.inputAccessoryView = custom
+        viewTitle.inputAccessoryView = custom
+    }
 }
+
+// MARK: - CustomToolbar Delegate
+
+extension ViewNotesVC: CustomToolBarDelegate {
+    func didSetBackgroundColor(view: Any, with color: UIColor) {
+        self.view.backgroundColor = color
+        viewTitle.backgroundColor = color
+        viewText.backgroundColor = color
+    }
+}
+
 // MARK: - UITextField Delegate
+
 extension ViewNotesVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        editButton.title = "Save"
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         viewTitle.resignFirstResponder()
         return true
     }
 }
 
+// MARK: - UITextView Delegate
+
 extension ViewNotesVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        editButton.title = "Save"
+    }
+
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             viewText.resignFirstResponder()
@@ -60,7 +98,31 @@ extension ViewNotesVC: UITextViewDelegate {
     }
 }
 
+// MARK: - Data Manipulation Methods
+
 extension ViewNotesVC {
+
+    func updateNotes(with title: String, newTitle: String, newText: String, newColor: UIColor) {
+        // attributesName, arguements
+        let predicate = NSPredicate(format: "title = %@ ", title)
+        let request: NSFetchRequest<Note> = Note.fetchRequest()
+        request.predicate = predicate
+
+        do {
+
+            let retrieveResult = try context.fetch(request)
+            let result = retrieveResult.first
+            // newValue for attributes
+            result?.setValue(newTitle, forKey: "title")
+            result?.setValue(newText, forKey: "text")
+            result?.setValue(newColor, forKey: "cellColor")
+            saveNotes()
+
+        } catch {
+            print("Error load context : \(error.localizedDescription)")
+        }
+    }
+
     func saveNotes() {
         do {
             try context.save()

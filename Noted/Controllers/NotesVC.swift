@@ -60,6 +60,7 @@ class NotesVC: UIViewController {
 }
 
 // MARK: - Data Manipulation
+
 extension NotesVC {
     func saveNotes() {
 
@@ -73,6 +74,7 @@ extension NotesVC {
 }
 
 // MARK: - Custom ToolBar Delegate
+
 extension NotesVC: CustomToolBarDelegate {
 
     func didSetBackgroundColor(view: Any, with color: UIColor) {
@@ -83,7 +85,9 @@ extension NotesVC: CustomToolBarDelegate {
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)
     }
 }
+
 // MARK: - UITextFieldDelegate
+
 extension NotesVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "Title" {
@@ -95,7 +99,9 @@ extension NotesVC: UITextFieldDelegate {
         return true
     }
 }
+
 // MARK: - UITextViewDelegate
+
 extension NotesVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Type something.."{

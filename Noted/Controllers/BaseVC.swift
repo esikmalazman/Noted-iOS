@@ -82,7 +82,6 @@ extension BaseVC: UITableViewDelegate {
         destinationVC.notesTitle = arrayNotes[indexPath.row].title
         destinationVC.notesText = arrayNotes[indexPath.row].text
         destinationVC.notesBgColor = arrayNotes[indexPath.row].cellColor
-
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -100,10 +99,10 @@ extension BaseVC: UITableViewDelegate {
         }
         return UISwipeActionsConfiguration(actions: [action])
     }
-
 }
 
 // MARK: - Table Datasource
+
 extension BaseVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -126,6 +125,7 @@ extension BaseVC: UITableViewDataSource {
 }
 
 // MARK: - Data Manipulation Methods
+
 extension BaseVC {
 
     func saveNotes() {
