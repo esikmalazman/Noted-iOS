@@ -23,7 +23,6 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
         guard arrayNotes.count < 0  else {  return loadNotes()}
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {

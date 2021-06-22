@@ -23,18 +23,13 @@ class NotesVC: UIViewController {
         super.viewDidLoad()
         setupToolBar()
         setupUI()
-        notesTitle.becomeFirstResponder()
     }
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
 
         // Notify baseVC that new notes added
         // NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
-
-        let newNotes = Note(context: context)
-        newNotes.title = notesTitle.text
-        newNotes.text = notesText.text
-        newNotes.cellColor = selectColor
+        addNewNotes()
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
         print("New Notes Saved")
         saveNotes()
@@ -45,6 +40,8 @@ class NotesVC: UIViewController {
         navigationController?.navigationBar.backgroundColor = selectColor
         view.backgroundColor = selectColor
         notesText.backgroundColor = selectColor
+        notesTitle.delegate = self
+        notesText.delegate = self
     }
     func setupToolBar() {
         guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
@@ -53,6 +50,12 @@ class NotesVC: UIViewController {
 
         notesTitle.inputAccessoryView = custom
         notesText.inputAccessoryView = custom
+    }
+    func addNewNotes() {
+        let newNotes = Note(context: context)
+        newNotes.title = notesTitle.text
+        newNotes.text = notesText.text
+        newNotes.cellColor = selectColor
     }
 }
 
@@ -79,5 +82,32 @@ extension NotesVC: CustomToolBarDelegate {
         self.view.backgroundColor = color
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)
     }
+}
+// MARK: - UITextFieldDelegate
+extension NotesVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text == "Title" {
+            textField.text = ""
+        }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+// MARK: - UITextViewDelegate
+extension NotesVC: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Type something.."{
+            textView.text = ""
+        }
+    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
 
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Items" representedClassName="Items" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="parentNotes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="items" inverseEntity="Note"/>
+    </entity>
     <entity name="Note" representedClassName=".Note" syncable="YES">
         <attribute name="cellColor" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName=".UIColor"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Items" inverseName="parentNotes" inverseEntity="Items"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Items" positionX="-247.5780639648438" positionY="1.95330810546875" width="128" height="88"/>
     </elements>
 </model>

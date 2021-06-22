@@ -132,14 +132,14 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50O-ka-si1">
                                 <rect key="frame" x="30" y="30" width="354" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type something.." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yzp-NO-zE1">
                                 <rect key="frame" x="30" y="83.5" width="354" height="700.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="df6-CS-WFN"/>
@@ -154,8 +154,15 @@
                             <constraint firstItem="50O-ka-si1" firstAttribute="top" secondItem="df6-CS-WFN" secondAttribute="top" constant="30" id="zIe-FK-FHP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4qj-ao-y8b"/>
+                    <navigationItem key="navigationItem" id="4qj-ao-y8b">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="C5o-yg-hbr">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="w3f-jy-Dq8" id="hbD-G2-hVN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="C5o-yg-hbr" id="YoF-Mj-bVT"/>
                         <outlet property="viewText" destination="yzp-NO-zE1" id="WrS-qv-oXF"/>
                         <outlet property="viewTitle" destination="50O-ka-si1" id="Bjy-dR-hvo"/>
                     </connections>
