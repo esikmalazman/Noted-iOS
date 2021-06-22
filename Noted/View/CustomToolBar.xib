@@ -18,21 +18,25 @@
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="WtJ-SC-5TX"/>
                     </connections>
                 </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="PY0-OE-XFD"/>
                 <barButtonItem title="Blue" id="EXD-hR-pbC">
                     <connections>
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="mqG-iU-rs7"/>
                     </connections>
                 </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="eiw-ZO-h6Z"/>
                 <barButtonItem title="Green" id="NcH-na-VIL">
                     <connections>
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="yeK-gm-RmB"/>
                     </connections>
                 </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="cN2-SR-x7O"/>
                 <barButtonItem title="Yellow" id="B5C-Gn-Qsf">
                     <connections>
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="tZf-Hn-Bfv"/>
                     </connections>
                 </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="wkd-vc-ecC"/>
                 <barButtonItem title="Red" id="e26-Wz-Sev">
                     <connections>
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="BC6-Ol-R6Y"/>
@@ -46,7 +50,7 @@
                 <outlet property="redButton" destination="e26-Wz-Sev" id="60V-U5-phY"/>
                 <outlet property="yellowButton" destination="B5C-Gn-Qsf" id="zDT-5j-rjz"/>
             </connections>
-            <point key="canvasLocation" x="219" y="80"/>
+            <point key="canvasLocation" x="218.84057971014494" y="79.6875"/>
         </toolbar>
     </objects>
 </document>

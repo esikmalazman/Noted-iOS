@@ -40,6 +40,12 @@ class CustomToolbar: UIToolbar {
         greenButton.tintColor = Constants.ToolBarColor.green
         yellowButton.tintColor = Constants.ToolBarColor.yellow
         redButton.tintColor = Constants.ToolBarColor.red
+
+        purpleButton.image = UIImage(systemName: "circle.fill")
+        blueButton.image = UIImage(systemName: "circle.fill")
+        greenButton.image = UIImage(systemName: "circle.fill")
+        yellowButton.image = UIImage(systemName: "circle.fill")
+        redButton.image = UIImage(systemName: "circle.fill")
     }
 
 }
