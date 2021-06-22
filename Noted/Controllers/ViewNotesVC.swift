@@ -16,7 +16,6 @@ class ViewNotesVC: UIViewController {
     var notesText: String?
     var notesBgColor: UIColor?
 
-
     @IBOutlet weak var viewTitle: UITextField!
     @IBOutlet weak var viewText: UITextView!
     @IBOutlet weak var editButton: UIBarButtonItem!
@@ -62,8 +61,8 @@ extension ViewNotesVC: UITextViewDelegate {
 }
 
 extension ViewNotesVC {
-    func saveNotes(){
-        do{
+    func saveNotes() {
+        do {
             try context.save()
         } catch {
             print("Error saving context \(error.localizedDescription)")
