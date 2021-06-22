@@ -40,6 +40,7 @@
 		7F036F772680CE2400A684C9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "create-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
 		7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tap-toolbar-color-sound.wav"; sourceTree = "<group>"; };
+		7F2B6C0226824A3D00B69644 /* Noted.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Noted.entitlements; sourceTree = "<group>"; };
 		7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		7F8E4231267DD8910066B816 /* Noted */ = {
 			isa = PBXGroup;
 			children = (
+				7F2B6C0226824A3D00B69644 /* Noted.entitlements */,
 				7F8E4232267DD8910066B816 /* AppDelegate.swift */,
 				7F8E4234267DD8910066B816 /* SceneDelegate.swift */,
 				7F8E424B267DD9250066B816 /* Constants.swift */,
@@ -424,7 +426,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,6 +437,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,7 +448,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,6 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
