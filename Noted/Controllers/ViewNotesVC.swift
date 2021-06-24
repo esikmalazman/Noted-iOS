@@ -42,6 +42,10 @@ class ViewNotesVC: UIViewController {
     func setupView() {
         viewTitle.text = notesTitle
         viewText.text = notesText
+
+        viewTitle.textColor = Constants.BrandColor.notesColor
+        viewText.textColor = Constants.BrandColor.notesColor
+
         view.backgroundColor = notesBgColor
         viewTitle.backgroundColor = notesBgColor
         viewText.backgroundColor = notesBgColor
