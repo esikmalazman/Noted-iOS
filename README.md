@@ -40,3 +40,4 @@ Noted taking apps with amazing sound design for iOS
 # Future Updates
 
 - Store voice note
+- macOS support
