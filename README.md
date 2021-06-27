@@ -6,6 +6,14 @@ Noted taking apps with amazing sound design for iOS
 ![noted-icon](https://user-images.githubusercontent.com/59039044/123546004-8401c080-d78d-11eb-9af4-1f23bcfd5521.png)
 
 
+## App Screenshots
+
+| 1     | 2 | 3   | 4  | 5
+| :---        |    :----:   |          ---: |    ---:  | ---:
+| ![6 5in-Screen-1](https://user-images.githubusercontent.com/59039044/123550922-2deb4800-d7a2-11eb-9801-a4a688b48a80.png)    | ![6 5in-Screen-2](https://user-images.githubusercontent.com/59039044/123550927-304da200-d7a2-11eb-91fc-194d78c392e9.png)  | ![6 5in-Screen-3](https://user-images.githubusercontent.com/59039044/123550929-32176580-d7a2-11eb-9a6b-b60301d90780.png)  | ![6 5in-Screen-6](https://user-images.githubusercontent.com/59039044/123550934-3479bf80-d7a2-11eb-8bfb-733989241470.png) |![Medium res](https://user-images.githubusercontent.com/59039044/123550938-36438300-d7a2-11eb-807a-4ff23f85a715.png)
+
+
+
 # What did I learn
 
 1. Adopt SwiftLint to increse code quality to 95%, readability, easy to maintain by following Swift convention.
