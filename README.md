@@ -1,6 +1,10 @@
 # Noted-iOS
 Noted taking apps with amazing sound design for iOS
 
+## App Icon
+
+![noted-icon](https://user-images.githubusercontent.com/59039044/123546004-8401c080-d78d-11eb-9af4-1f23bcfd5521.png)
+
 
 # What did I learn
 
