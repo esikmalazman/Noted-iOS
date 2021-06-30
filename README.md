@@ -36,13 +36,13 @@ Noted taking apps with amazing sound design for iOS/iPadOS
 4. SwiftLint
 
 
-# Version 1
+## Version 1
 
 - Create,Update,Delete,Read Notes
 - Change notes color
 - Sound design each interaction
 
-# Future Updates
+## Future Updates
 
 - Store voice note
 - macOS support
