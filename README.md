@@ -1,5 +1,5 @@
 # Noted-iOS
-Noted taking apps with amazing sound design for iOS
+Noted taking apps with amazing sound design for iOS/iPadOS
 
 ## App Icon
 
