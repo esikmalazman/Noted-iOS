@@ -215,6 +215,7 @@
                     <connections>
                         <outlet property="notesText" destination="Y9H-5c-QL9" id="Wbf-ik-VwH"/>
                         <outlet property="notesTitle" destination="Ygt-Ou-Ia0" id="3Cc-mB-VMT"/>
+                        <outlet property="saveBtn" destination="w9u-DS-sTz" id="ZtO-RF-mvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2D-Sw-NL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
