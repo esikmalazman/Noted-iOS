@@ -92,14 +92,6 @@ extension ViewNotesVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         editButton.title = "Save"
     }
-
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            viewText.resignFirstResponder()
-            return false
-        }
-        return true
-    }
 }
 
 // MARK: - Data Manipulation Methods
