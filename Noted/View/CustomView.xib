@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="Noted" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S03-Go-kZq">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NFQ-ob-gNb">
+                            <rect key="frame" x="99" y="88" width="102" height="101"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="102" id="7FK-gx-aeH"/>
+                                <constraint firstAttribute="height" constant="101" id="WP2-F2-5Ey"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="vlr-WK-2eg">
+                            <rect key="frame" x="8" y="222.5" width="284" height="18.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                            <color key="textColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NFQ-ob-gNb" secondAttribute="trailing" constant="99" id="6Jt-g6-bQ6"/>
+                        <constraint firstItem="NFQ-ob-gNb" firstAttribute="leading" secondItem="S03-Go-kZq" secondAttribute="leading" constant="99" id="Og2-bj-cew"/>
+                        <constraint firstAttribute="trailing" secondItem="vlr-WK-2eg" secondAttribute="trailing" constant="8" id="S2a-pE-UvL"/>
+                        <constraint firstAttribute="bottom" secondItem="vlr-WK-2eg" secondAttribute="bottom" constant="59" id="bER-TC-Bki"/>
+                        <constraint firstItem="NFQ-ob-gNb" firstAttribute="top" secondItem="S03-Go-kZq" secondAttribute="top" constant="88" id="fNO-uF-9ip"/>
+                        <constraint firstItem="vlr-WK-2eg" firstAttribute="leading" secondItem="S03-Go-kZq" secondAttribute="leading" constant="8" id="vWL-zQ-S6i"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="S03-Go-kZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="J7m-Ys-WoI"/>
+                <constraint firstItem="S03-Go-kZq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NaS-8d-F8q"/>
+                <constraint firstItem="S03-Go-kZq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XOg-vX-8vq"/>
+                <constraint firstItem="S03-Go-kZq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bc9-Em-jdJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="customImage" destination="NFQ-ob-gNb" id="mdV-Jg-BT5"/>
+                <outlet property="descLabel" destination="vlr-WK-2eg" id="a0b-Si-Atg"/>
+            </connections>
+            <point key="canvasLocation" x="-159.42028985507247" y="-129.24107142857142"/>
+        </view>
+    </objects>
+</document>

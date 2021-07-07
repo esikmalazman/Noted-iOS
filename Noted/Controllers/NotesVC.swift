@@ -17,6 +17,8 @@ class NotesVC: UIViewController {
     @IBOutlet weak var notesTitle: UITextField!
     @IBOutlet weak var notesText: UITextView!
 
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
+
     var selectColor: UIColor = Constants.BrandColor.bgColor!
 
     override func viewDidLoad() {
@@ -39,9 +41,12 @@ class NotesVC: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.backgroundColor = selectColor
         view.backgroundColor = selectColor
+
         notesText.backgroundColor = selectColor
         notesTitle.delegate = self
         notesText.delegate = self
+
+        saveBtn.isEnabled = false
     }
     func setupToolBar() {
         guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
@@ -82,6 +87,7 @@ extension NotesVC: CustomToolBarDelegate {
         notesTitle.backgroundColor = color
         notesText.backgroundColor = color
         self.view.backgroundColor = color
+        saveBtn.isEnabled = true
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)
     }
 }
@@ -107,13 +113,5 @@ extension NotesVC: UITextViewDelegate {
         if textView.text == "Type something.."{
             textView.text = ""
         }
-    }
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
     }
 }

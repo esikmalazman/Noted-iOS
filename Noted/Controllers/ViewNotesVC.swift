@@ -42,6 +42,10 @@ class ViewNotesVC: UIViewController {
     func setupView() {
         viewTitle.text = notesTitle
         viewText.text = notesText
+
+        viewTitle.textColor = Constants.BrandColor.notesColor
+        viewText.textColor = Constants.BrandColor.notesColor
+
         view.backgroundColor = notesBgColor
         viewTitle.backgroundColor = notesBgColor
         viewText.backgroundColor = notesBgColor
@@ -87,14 +91,6 @@ extension ViewNotesVC: UITextFieldDelegate {
 extension ViewNotesVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         editButton.title = "Save"
-    }
-
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            viewText.resignFirstResponder()
-            return false
-        }
-        return true
     }
 }
 
