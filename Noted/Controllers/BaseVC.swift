@@ -23,6 +23,12 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
         guard arrayNotes.count < 0  else {  return loadNotes()}
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+
+      tableviewPlaceholder()
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +69,37 @@ class BaseVC: UIViewController {
         addButton.layer.cornerRadius = 30
 
     }
+
+    func tableviewPlaceholder() {
+
+        if arrayNotes.count == 0 {
+
+            tableView.backgroundColor = .clear
+
+            guard let emptyView = Bundle.main.loadNibNamed("CustomView", owner: nil, options: nil)?.first as? CustomView else {return}
+            emptyView.backgroundColor = .clear
+
+            let smallConfiguration = UIImage.SymbolConfiguration(scale: .small)
+            emptyView.customImage.image =  UIImage(systemName: "note.text", withConfiguration: smallConfiguration)
+            emptyView.tintColor = Constants.BrandColor.mainFontColor
+
+            emptyView.descLabel.text = "You haven't create any notes yet"
+            emptyView.descLabel.textColor = Constants.BrandColor.mainFontColor
+            emptyView.descLabel.textAlignment = .center
+
+            // Set tag to custom view
+            emptyView.tag = 1
+
+            self.tableView.addSubview(emptyView)
+
+        } else {
+            // Remove custom view
+            DispatchQueue.main.async {
+                self.tableView.viewWithTag(1)?.removeFromSuperview()
+            }
+
+        }
+    }
 }
 
 // MARK: - Table Delegate
@@ -95,6 +132,7 @@ extension BaseVC: UITableViewDelegate {
             self.context.delete(notesToRemove)
             self.saveNotes()
             self.loadNotes()
+            self.tableviewPlaceholder()
 
         }
         return UISwipeActionsConfiguration(actions: [action])
@@ -116,10 +154,12 @@ extension BaseVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.customCellIdentifierNote, for: indexPath) as! CustomNotedCell
         // swiftlint:enable force_cast
 
-        cell.titleCell.text = listOfNotes.title
-        cell.subtitleCell.text = listOfNotes.text
-        cell.cellBg.backgroundColor = listOfNotes.cellColor
-        cell.selectionStyle = .none
+            cell.titleCell.text = listOfNotes.title
+            cell.subtitleCell.text = listOfNotes.text
+            cell.cellBg.backgroundColor = listOfNotes.cellColor
+            cell.selectionStyle = .none
+            tableView.backgroundView = nil
+
         return cell
     }
 }
@@ -134,6 +174,7 @@ extension BaseVC {
         } catch {
             print("Error in saving context \(error.localizedDescription)")
         }
+        tableView.reloadData()
     }
     @objc func loadNotes() {
 
