@@ -20,15 +20,6 @@ jobs:
           path: output/scan
       - store_artifacts:
           path: output
- swiftlint:
-
-    steps:
-      - checkout
-      - run: swiftlint lint --reporter junit | tee result.xml
-      - store_artifacts:
-          path: result.xml
-      - store_test_results:
-          path: result.xml
 
 
 workflows:
@@ -36,4 +27,3 @@ workflows:
     jobs:
 
       - build-and-test
-      - swiftlint
