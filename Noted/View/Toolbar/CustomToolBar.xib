@@ -13,6 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <items>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="Nna-2C-v95"/>
                 <barButtonItem title="Purple" id="p20-pV-LkS">
                     <connections>
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="WtJ-SC-5TX"/>
@@ -42,6 +43,7 @@
                         <action selector="colorToolBarPressed:" destination="Drc-LB-Rrr" id="BC6-Ol-R6Y"/>
                     </connections>
                 </barButtonItem>
+                <barButtonItem style="plain" systemItem="flexibleSpace" id="q8v-pc-TTZ"/>
             </items>
             <connections>
                 <outlet property="blueButton" destination="EXD-hR-pbC" id="gVg-D1-hWw"/>
