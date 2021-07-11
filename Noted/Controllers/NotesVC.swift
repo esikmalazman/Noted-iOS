@@ -95,10 +95,12 @@ extension NotesVC: CustomToolBarDelegate {
 // MARK: - UITextFieldDelegate
 
 extension NotesVC: UITextFieldDelegate {
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "Title" {
             textField.text = ""
         }
+
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

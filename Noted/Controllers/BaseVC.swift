@@ -25,11 +25,6 @@ class BaseVC: UIViewController {
         guard arrayNotes.count < 0  else {  return loadNotes()}
 
     }
-    override func viewDidAppear(_ animated: Bool) {
-
-      tableviewPlaceholder()
-
-    }
 
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -70,36 +65,6 @@ class BaseVC: UIViewController {
 
     }
 
-    func tableviewPlaceholder() {
-
-        if arrayNotes.count == 0 {
-
-            tableView.backgroundColor = .clear
-
-            guard let emptyView = Bundle.main.loadNibNamed("CustomView", owner: nil, options: nil)?.first as? CustomView else {return}
-            emptyView.backgroundColor = .clear
-
-            let smallConfiguration = UIImage.SymbolConfiguration(scale: .small)
-            emptyView.customImage.image =  UIImage(systemName: "note.text", withConfiguration: smallConfiguration)
-            emptyView.tintColor = Constants.BrandColor.mainFontColor
-
-            emptyView.descLabel.text = "You haven't create any notes yet"
-            emptyView.descLabel.textColor = Constants.BrandColor.mainFontColor
-            emptyView.descLabel.textAlignment = .center
-
-            // Set tag to custom view
-            emptyView.tag = 1
-
-            self.tableView.addSubview(emptyView)
-
-        } else {
-            // Remove custom view
-            DispatchQueue.main.async {
-                self.tableView.viewWithTag(1)?.removeFromSuperview()
-            }
-
-        }
-    }
 }
 
 // MARK: - Table Delegate
@@ -132,7 +97,6 @@ extension BaseVC: UITableViewDelegate {
             self.context.delete(notesToRemove)
             self.saveNotes()
             self.loadNotes()
-            self.tableviewPlaceholder()
 
         }
         return UISwipeActionsConfiguration(actions: [action])
@@ -144,7 +108,12 @@ extension BaseVC: UITableViewDelegate {
 extension BaseVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayNotes.count
+        if arrayNotes.isEmpty {
+            tableView.setEmptyMessage("You haven't created any notes yet", Constants.BrandColor.mainFontColor ?? .black)
+        } else {
+            self.tableView.restore()
+        }
+       return arrayNotes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -162,6 +131,7 @@ extension BaseVC: UITableViewDataSource {
 
         return cell
     }
+
 }
 
 // MARK: - Data Manipulation Methods
