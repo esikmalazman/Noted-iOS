@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-WK-Smv">
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-uk-hs5">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-uk-hs5">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="NOv-E1-P1s"/>
@@ -28,6 +28,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" name="bgColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -44,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchImage" width="64" height="65"/>
+        <image name="launchscreen" width="251" height="252"/>
         <namedColor name="bgColor">
             <color red="0.98000001907348633" green="0.98000001907348633" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

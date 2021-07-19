@@ -23,6 +23,7 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
         guard arrayNotes.count < 0  else {  return loadNotes()}
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +64,7 @@ class BaseVC: UIViewController {
         addButton.layer.cornerRadius = 30
 
     }
+
 }
 
 // MARK: - Table Delegate
@@ -106,7 +108,12 @@ extension BaseVC: UITableViewDelegate {
 extension BaseVC: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayNotes.count
+        if arrayNotes.isEmpty {
+            tableView.setEmptyMessage("You haven't created any notes yet", Constants.BrandColor.mainFontColor ?? .black)
+        } else {
+            self.tableView.restore()
+        }
+       return arrayNotes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,12 +123,15 @@ extension BaseVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.customCellIdentifierNote, for: indexPath) as! CustomNotedCell
         // swiftlint:enable force_cast
 
-        cell.titleCell.text = listOfNotes.title
-        cell.subtitleCell.text = listOfNotes.text
-        cell.cellBg.backgroundColor = listOfNotes.cellColor
-        cell.selectionStyle = .none
+            cell.titleCell.text = listOfNotes.title
+            cell.subtitleCell.text = listOfNotes.text
+            cell.cellBg.backgroundColor = listOfNotes.cellColor
+            cell.selectionStyle = .none
+            tableView.backgroundView = nil
+
         return cell
     }
+
 }
 
 // MARK: - Data Manipulation Methods
@@ -134,6 +144,7 @@ extension BaseVC {
         } catch {
             print("Error in saving context \(error.localizedDescription)")
         }
+        tableView.reloadData()
     }
     @objc func loadNotes() {
 

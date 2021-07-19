@@ -12,6 +12,10 @@
 		7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F036F772680CE2400A684C9 /* SoundManager.swift */; };
 		7F036F7B2680D07100A684C9 /* create-notes-swoosh-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */; };
 		7F036F802680D2FB00A684C9 /* tap-toolbar-color-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */; };
+		7F0551FF2692F70100ED7A47 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0551FE2692F70100ED7A47 /* CustomView.xib */; };
+		7F0552022692F71400ED7A47 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0552012692F71400ED7A47 /* CustomView.swift */; };
+		7F0552052693054F00ED7A47 /* noted-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0552042693054F00ED7A47 /* noted-icon.png */; };
+		7F4A35F2269AF93500DF75E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A35F1269AF93500DF75E7 /* Extensions.swift */; };
 		7F793DB6267F37E100AAE31E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */; };
 		7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */; };
 		7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */; };
@@ -40,7 +44,11 @@
 		7F036F772680CE2400A684C9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "create-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
 		7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tap-toolbar-color-sound.wav"; sourceTree = "<group>"; };
+		7F0551FE2692F70100ED7A47 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		7F0552012692F71400ED7A47 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		7F0552042693054F00ED7A47 /* noted-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noted-icon.png"; sourceTree = "<group>"; };
 		7F2B6C0226824A3D00B69644 /* Noted.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Noted.entitlements; sourceTree = "<group>"; };
+		7F4A35F1269AF93500DF75E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 				7F8E4232267DD8910066B816 /* AppDelegate.swift */,
 				7F8E4234267DD8910066B816 /* SceneDelegate.swift */,
 				7F8E424B267DD9250066B816 /* Constants.swift */,
+				7F4A35F1269AF93500DF75E7 /* Extensions.swift */,
 				7F8E4257267DDC710066B816 /* Model */,
 				7FA12F0A267DE1E0004A1A4A /* Controllers */,
 				7FA12F0C267DE1E6004A1A4A /* View */,
@@ -146,6 +155,7 @@
 				7F793DBB267F37F100AAE31E /* Fonts */,
 				7F8E423E267DD8920066B816 /* Assets.xcassets */,
 				7F8E4243267DD8920066B816 /* Info.plist */,
+				7F0552042693054F00ED7A47 /* noted-icon.png */,
 			);
 			path = Noted;
 			sourceTree = "<group>";
@@ -178,6 +188,8 @@
 				7F8E4238267DD8910066B816 /* Main.storyboard */,
 				7F2B61642684C0AA00DEB11F /* Toolbar */,
 				7F2B61662684C0C100DEB11F /* CustomTableViewCell */,
+				7F0551FE2692F70100ED7A47 /* CustomView.xib */,
+				7F0552012692F71400ED7A47 /* CustomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 				7F793DB6267F37E100AAE31E /* Montserrat-Regular.ttf in Resources */,
 				7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */,
 				7F036F7B2680D07100A684C9 /* create-notes-swoosh-sound.wav in Resources */,
+				7F0552052693054F00ED7A47 /* noted-icon.png in Resources */,
 				7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */,
 				7F8E4242267DD8920066B816 /* LaunchScreen.storyboard in Resources */,
 				7F8E423F267DD8920066B816 /* Assets.xcassets in Resources */,
@@ -253,6 +266,7 @@
 				7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */,
 				7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */,
 				7F036F752680CDB800A684C9 /* save-notes-bell-sound.wav in Resources */,
+				7F0551FF2692F70100ED7A47 /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +304,14 @@
 				7FA12F12267DECD8004A1A4A /* ViewNotesVC.swift in Sources */,
 				7FA12F0F267DE325004A1A4A /* NotesVC.swift in Sources */,
 				7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */,
+				7F0552022692F71400ED7A47 /* CustomView.swift in Sources */,
 				7F8E423D267DD8910066B816 /* Noted.xcdatamodeld in Sources */,
 				7F8E4237267DD8910066B816 /* BaseVC.swift in Sources */,
 				7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */,
 				7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */,
 				7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */,
 				7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */,
+				7F4A35F2269AF93500DF75E7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -451,6 +468,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -466,6 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -473,6 +492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
