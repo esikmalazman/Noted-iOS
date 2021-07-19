@@ -57,10 +57,6 @@ class BaseVC: UIViewController {
         addButton.backgroundColor = Constants.BrandColor.mainFontColor
         addButton.tintColor = Constants.BrandColor.bgColor
 
-        addButton.layer.shadowColor = UIColor.white.cgColor
-        addButton.layer.shadowOpacity = 0.8
-
-        addButton.layer.shadowOffset = CGSize(width: 1.3, height: 2)
         addButton.layer.cornerRadius = 30
 
     }
