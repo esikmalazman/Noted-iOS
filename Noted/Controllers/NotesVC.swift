@@ -43,10 +43,16 @@ class NotesVC: UIViewController {
         view.backgroundColor = selectColor
 
         notesText.backgroundColor = selectColor
-        notesTitle.delegate = self
         notesText.delegate = self
+        notesText.isScrollEnabled = true
+
+        notesTitle.delegate = self
 
         saveBtn.isEnabled = false
+
+        // Change the appearance of cursor in textfield
+        UITextField.appearance().tintColor = Constants.BrandColor.cursorColor
+        UITextView.appearance().tintColor = Constants.BrandColor.cursorColor
     }
     func setupToolBar() {
         guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
@@ -84,8 +90,14 @@ extension NotesVC: CustomToolBarDelegate {
 
     func didSetBackgroundColor(view: Any, with color: UIColor) {
         selectColor = color
+
         notesTitle.backgroundColor = color
+        // Change text color when color notes set
+        notesTitle.textColor = .black
+
         notesText.backgroundColor = color
+        notesText.textColor = .black
+
         self.view.backgroundColor = color
         saveBtn.isEnabled = true
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)

@@ -18,6 +18,7 @@ struct Constants {
         static let mainFontColor = UIColor(named: "mainFontColor")
         static let notesColor = UIColor(named: "notesColor")
         static let subtitleNotesColor = UIColor(named: "notesSubtitleColor")
+        static let cursorColor = UIColor(named: "cursorColor")
     }
 
     struct ToolBarColor {
