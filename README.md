@@ -1,9 +1,10 @@
+![noted-icon](https://user-images.githubusercontent.com/59039044/123562235-ff8c5d80-d7df-11eb-9191-a687090a8bb6.png)
+
 # Noted-iOS
 Noted taking apps with amazing sound design for iOS/iPadOS
 
-## App Icon
 
-![noted-icon](https://user-images.githubusercontent.com/59039044/123562235-ff8c5d80-d7df-11eb-9191-a687090a8bb6.png)
+
 
 
 
