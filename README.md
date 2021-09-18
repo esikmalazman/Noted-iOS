@@ -1,12 +1,12 @@
-![noted-icon](https://user-images.githubusercontent.com/59039044/123562235-ff8c5d80-d7df-11eb-9191-a687090a8bb6.png)
+<img src="https://user-images.githubusercontent.com/59039044/123562235-ff8c5d80-d7df-11eb-9191-a687090a8bb6.png" width="100" height="100">
 
 # Noted-iOS
 Noted taking apps with amazing sound design for iOS/iPadOS
 
+<img src="https://user-images.githubusercontent.com/59039044/128592087-f48add5a-d0bc-480b-bd70-47dc7e85d15f.mp4" width="200">
 
 
-
-
+---
 
 ## App Screenshots
 
@@ -52,6 +52,6 @@ Noted taking apps with amazing sound design for iOS/iPadOS
 - Sync notes between device
 
 
-https://user-images.githubusercontent.com/59039044/128592087-f48add5a-d0bc-480b-bd70-47dc7e85d15f.mp4
+
 
 
