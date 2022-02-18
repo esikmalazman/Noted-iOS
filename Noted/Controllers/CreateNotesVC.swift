@@ -13,11 +13,10 @@ final class CreateNotesVC: UIViewController {
     @IBOutlet weak var notesTitle: UITextField!
     @IBOutlet weak var notesText: UITextView!
     @IBOutlet weak var saveBtn: UIBarButtonItem!
+
     // MARK: - Variables
     var selectColor: UIColor = Constants.BrandColor.bgColor!
-    // swiftlint:disable force_cast
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    // swiftlint:enable force_cast
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -27,7 +26,6 @@ final class CreateNotesVC: UIViewController {
     }
     // MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-
         // Notify baseVC that new notes added
         // NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
         addNewNotes()

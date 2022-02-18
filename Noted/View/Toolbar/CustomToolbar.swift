@@ -7,7 +7,6 @@
 
 import UIKit
 
-// class, only allow class to adopt the protocol
 protocol CustomToolBarDelegate: AnyObject {
     func didSetBackgroundColor(view: Any, with color: UIColor)
 }

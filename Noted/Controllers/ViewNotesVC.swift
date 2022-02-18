@@ -16,10 +16,8 @@ final class ViewNotesVC: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
 
     // MARK: - Variables
-
-    // swiftlint:disable force_cast
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    // swiftlint:enable force_cast
+
     var notesTitle: String?
     var notesText: String?
     var notesBgColor: UIColor?

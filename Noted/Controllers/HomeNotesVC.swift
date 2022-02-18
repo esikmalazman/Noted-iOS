@@ -15,10 +15,8 @@ final class HomeNotesVC: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
-    // swiftlint:disable force_cast
+    // MARK: - Variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    // swiftlint:enable force_cast
-
     private var arrayNotes = [Note]()
 
     // MARK: - LifeCycle
@@ -134,7 +132,6 @@ extension HomeNotesVC {
         }
         tableView.reloadData()
     }
-
 }
 
 // MARK: - Private methods
