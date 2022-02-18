@@ -7,34 +7,39 @@
 
 import UIKit
 
-// class, only allow class to adopt the protocol
-protocol CustomToolBarDelegate: class {
+protocol CustomToolBarDelegate: AnyObject {
     func didSetBackgroundColor(view: Any, with color: UIColor)
 }
 
-class CustomToolbar: UIToolbar {
+final class CustomToolbar: UIToolbar {
 
+    // MARK: - Outlets
     @IBOutlet weak var purpleButton: UIBarButtonItem!
     @IBOutlet weak var blueButton: UIBarButtonItem!
     @IBOutlet weak var greenButton: UIBarButtonItem!
     @IBOutlet weak var yellowButton: UIBarButtonItem!
     @IBOutlet weak var redButton: UIBarButtonItem!
 
-     weak var customDelegate: CustomToolBarDelegate?
+    // MARK: - Variables
+    weak var customDelegate: CustomToolBarDelegate?
 
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         setupButton()
     }
 
+    // MARK: - Actions
     @IBAction func colorToolBarPressed(_ sender: UIBarButtonItem) {
 
         guard let selectColor = sender.tintColor else {return}
         print(sender.tintColor!)
         customDelegate?.didSetBackgroundColor(view: self, with: selectColor)
     }
+}
 
-    func setupButton() {
-
+// MARK: - Private methods
+extension CustomToolbar {
+    private func setupButton() {
         purpleButton.tintColor = Constants.ToolBarColor.purple
         blueButton.tintColor = Constants.ToolBarColor.blue
         greenButton.tintColor = Constants.ToolBarColor.green
@@ -47,5 +52,4 @@ class CustomToolbar: UIToolbar {
         yellowButton.image = UIImage(systemName: "circle.fill")
         redButton.image = UIImage(systemName: "circle.fill")
     }
-
 }

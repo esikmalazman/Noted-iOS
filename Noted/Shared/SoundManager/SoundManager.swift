@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class SoundManager {
+final class SoundManager {
 
     static let shared = SoundManager()
 

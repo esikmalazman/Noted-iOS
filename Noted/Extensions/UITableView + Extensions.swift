@@ -8,7 +8,6 @@
 import UIKit
 
 extension UITableView {
-
     /// Set empty state for empty tableview
     func setEmptyMessage(_ message: String, _ textColor: UIColor = .black) {
 
@@ -26,8 +25,6 @@ extension UITableView {
     }
 
     func restore() {
-
         self.backgroundView = nil
-
     }
 }
