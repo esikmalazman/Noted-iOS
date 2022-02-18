@@ -8,7 +8,14 @@
 import UIKit
 import CoreData
 
-class ViewNotesVC: UIViewController {
+final class ViewNotesVC: UIViewController {
+
+    // MARK: - Outlets
+    @IBOutlet weak var viewTitle: UITextField!
+    @IBOutlet weak var viewText: UITextView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
+
+    // MARK: - Variables
 
     // swiftlint:disable force_cast
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -16,18 +23,14 @@ class ViewNotesVC: UIViewController {
     var notesTitle: String?
     var notesText: String?
     var notesBgColor: UIColor?
-
-    @IBOutlet weak var viewTitle: UITextField!
-    @IBOutlet weak var viewText: UITextView!
-    @IBOutlet weak var editButton: UIBarButtonItem!
-
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupToolBar()
     }
+    // MARK: - Actions
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-
         if editButton.title == "Edit" {
             editButton.title = "Save"
             viewTitle.becomeFirstResponder()
@@ -38,33 +41,9 @@ class ViewNotesVC: UIViewController {
             navigationController?.popToRootViewController(animated: true)
         }
     }
-
-    func setupView() {
-        viewTitle.text = notesTitle
-        viewText.text = notesText
-
-        viewTitle.textColor = Constants.BrandColor.notesColor
-        viewText.textColor = Constants.BrandColor.notesColor
-
-        view.backgroundColor = notesBgColor
-        viewTitle.backgroundColor = notesBgColor
-        viewText.backgroundColor = notesBgColor
-
-        viewText.delegate = self
-        viewTitle.delegate = self
-    }
-    func setupToolBar() {
-        guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
-        custom.sizeToFit()
-        custom.customDelegate = self
-
-        viewText.inputAccessoryView = custom
-        viewTitle.inputAccessoryView = custom
-    }
 }
 
 // MARK: - CustomToolbar Delegate
-
 extension ViewNotesVC: CustomToolBarDelegate {
     func didSetBackgroundColor(view: Any, with color: UIColor) {
         self.view.backgroundColor = color
@@ -74,7 +53,6 @@ extension ViewNotesVC: CustomToolBarDelegate {
 }
 
 // MARK: - UITextField Delegate
-
 extension ViewNotesVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         editButton.title = "Save"
@@ -87,7 +65,6 @@ extension ViewNotesVC: UITextFieldDelegate {
 }
 
 // MARK: - UITextView Delegate
-
 extension ViewNotesVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         editButton.title = "Save"
@@ -95,7 +72,6 @@ extension ViewNotesVC: UITextViewDelegate {
 }
 
 // MARK: - Data Manipulation Methods
-
 extension ViewNotesVC {
 
     func updateNotes(with title: String, newTitle: String, newText: String, newColor: UIColor) {
@@ -127,3 +103,32 @@ extension ViewNotesVC {
         }
     }
 }
+
+// MARK: - Private methods
+extension ViewNotesVC {
+    private func setupView() {
+        viewTitle.text = notesTitle
+        viewText.text = notesText
+
+        viewTitle.textColor = Constants.BrandColor.notesColor
+        viewText.textColor = Constants.BrandColor.notesColor
+
+        view.backgroundColor = notesBgColor
+        viewTitle.backgroundColor = notesBgColor
+        viewText.backgroundColor = notesBgColor
+
+        viewText.delegate = self
+        viewTitle.delegate = self
+    }
+
+    private func setupToolBar() {
+        guard let custom = UINib(nibName: XIBName.CustomToolBar.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
+        custom.sizeToFit()
+        custom.customDelegate = self
+
+        viewText.inputAccessoryView = custom
+        viewTitle.inputAccessoryView = custom
+    }
+}
+
+#warning("Navbar tint not follow selected color")
