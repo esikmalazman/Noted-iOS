@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import CoreData
 
+#warning("Navbar tint not follow selected color")
 final class NotesDetailsVC: UIViewController {
 
     // MARK: - Outlets
@@ -16,28 +16,32 @@ final class NotesDetailsVC: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
 
     // MARK: - Variables
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
     var notesTitle: String?
     var notesText: String?
     var notesBgColor: UIColor?
+    var selectedNote: Note?
+
+    private let presenter = NotesDetailsPresenter()
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupToolBar()
+        presenter.delegate = self
+        presenter.fetchNote(withTitle: notesTitle!)
     }
     // MARK: - Actions
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        if editButton.title == "Edit" {
-            editButton.title = "Save"
-            viewTitle.becomeFirstResponder()
-        } else {
-            editButton.title = "Edit"
-            updateNotes(with: notesTitle!, newTitle: viewTitle.text!, newText: viewText.text, newColor: view.backgroundColor!)
-            SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
-            navigationController?.popToRootViewController(animated: true)
-        }
+        presenter.didTapEditNotes()
+    }
+
+    func updateNotes(newTitle: String, newText: String, newColor: UIColor) {
+        selectedNote?.title = newTitle
+        selectedNote?.text = newText
+        selectedNote?.cellColor = newColor
+
+        presenter.saveNotes(selectedNote!)
     }
 }
 
@@ -69,39 +73,6 @@ extension NotesDetailsVC: UITextViewDelegate {
     }
 }
 
-// MARK: - Data Manipulation Methods
-extension NotesDetailsVC {
-
-    func updateNotes(with title: String, newTitle: String, newText: String, newColor: UIColor) {
-        // attributesName, arguements
-        let predicate = NSPredicate(format: "title = %@ ", title)
-        let request: NSFetchRequest<Note> = Note.fetchRequest()
-        request.predicate = predicate
-
-        do {
-
-            let retrieveResult = try context.fetch(request)
-            let result = retrieveResult.first
-            // newValue for attributes
-            result?.setValue(newTitle, forKey: "title")
-            result?.setValue(newText, forKey: "text")
-            result?.setValue(newColor, forKey: "cellColor")
-            saveNotes()
-
-        } catch {
-            print("Error load context : \(error.localizedDescription)")
-        }
-    }
-
-    func saveNotes() {
-        do {
-            try context.save()
-        } catch {
-            print("Error saving context \(error.localizedDescription)")
-        }
-    }
-}
-
 // MARK: - Private methods
 extension NotesDetailsVC {
     private func setupView() {
@@ -129,4 +100,21 @@ extension NotesDetailsVC {
     }
 }
 
-#warning("Navbar tint not follow selected color")
+// MARK: - NotesDetailsPresenterDelegate
+extension NotesDetailsVC: NotesDetailsPresenterDelegate {
+    func presentFetchForSelectedNote(_ NotesDetailsPresenter: NotesDetailsPresenter, data: Note) {
+        selectedNote = data
+    }
+
+    func presentActionForEditNotes(_ NotesDetailsPresenter: NotesDetailsPresenter) {
+        if editButton.title == "Edit" {
+            editButton.title = "Save"
+            viewTitle.becomeFirstResponder()
+        } else {
+            editButton.title = "Edit"
+            updateNotes(newTitle: viewTitle.text!, newText: viewText.text, newColor: view.backgroundColor!)
+            SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}
