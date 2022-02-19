@@ -5,7 +5,6 @@
 //  Created by Ikmal Azman on 19/02/2022.
 //
 
-import UIKit
 import CoreData
 
 final class CoreDataManager {
@@ -42,5 +41,9 @@ final class CoreDataManager {
             completion(.failure(error.localizedDescription as! Error))
         }
 
+    }
+    
+    func accessContext() -> NSManagedObjectContext {
+        return context
     }
 }
