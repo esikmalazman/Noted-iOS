@@ -18,6 +18,8 @@
 		7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */; };
 		7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */; };
 		7F793DB9267F37E100AAE31E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB5267F37E100AAE31E /* Montserrat-SemiBold.ttf */; };
+		7F7DFFEB27C06B970072DCEE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFEA27C06B970072DCEE /* CoreDataManager.swift */; };
+		7F7DFFED27C06EAF0072DCEE /* HomeNotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */; };
 		7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4232267DD8910066B816 /* AppDelegate.swift */; };
 		7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4234267DD8910066B816 /* SceneDelegate.swift */; };
 		7F8E4237267DD8910066B816 /* HomeNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4236267DD8910066B816 /* HomeNotesVC.swift */; };
@@ -29,7 +31,7 @@
 		7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */; };
 		7F8E4256267DDC680066B816 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */; };
 		7FA12F0F267DE325004A1A4A /* CreateNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */; };
-		7FA12F12267DECD8004A1A4A /* ViewNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */; };
+		7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */; };
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
 		7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2399827BFC43100FFEE0D /* XIBName.swift */; };
@@ -53,6 +55,8 @@
 		7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		7F793DB5267F37E100AAE31E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		7F7DFFEA27C06B970072DCEE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesPresenter.swift; sourceTree = "<group>"; };
 		7F8E422F267DD8910066B816 /* Noted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8E4232267DD8910066B816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F8E4234267DD8910066B816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotesVC.swift; sourceTree = "<group>"; };
-		7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNotesVC.swift; sourceTree = "<group>"; };
+		7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailsVC.swift; sourceTree = "<group>"; };
 		7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
 		7FD2399827BFC43100FFEE0D /* XIBName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBName.swift; sourceTree = "<group>"; };
@@ -196,7 +200,8 @@
 			children = (
 				7F8E4236267DD8910066B816 /* HomeNotesVC.swift */,
 				7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */,
-				7FA12F11267DECD8004A1A4A /* ViewNotesVC.swift */,
+				7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */,
+				7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */,
 				7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */,
 				7F8E423B267DD8910066B816 /* Noted.xcdatamodeld */,
+				7F7DFFEA27C06B970072DCEE /* CoreDataManager.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -410,8 +416,9 @@
 				7F8E424C267DD9250066B816 /* Constants.swift in Sources */,
 				7F8E4256267DDC680066B816 /* Note+CoreDataProperties.swift in Sources */,
 				7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */,
+				7F7DFFEB27C06B970072DCEE /* CoreDataManager.swift in Sources */,
 				7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */,
-				7FA12F12267DECD8004A1A4A /* ViewNotesVC.swift in Sources */,
+				7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */,
 				7FA12F0F267DE325004A1A4A /* CreateNotesVC.swift in Sources */,
 				7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */,
 				7F8E423D267DD8910066B816 /* Noted.xcdatamodeld in Sources */,
@@ -419,6 +426,7 @@
 				7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */,
 				7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */,
 				7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */,
+				7F7DFFED27C06EAF0072DCEE /* HomeNotesPresenter.swift in Sources */,
 				7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */,
 				7F4A35F2269AF93500DF75E7 /* UITableView + Extensions.swift in Sources */,
 			);
