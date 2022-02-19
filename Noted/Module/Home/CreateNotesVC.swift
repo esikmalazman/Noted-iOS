@@ -74,7 +74,7 @@ extension CreateNotesVC: UITextViewDelegate {
         }
     }
 }
-//MARK: - Private methods
+// MARK: - Private methods
 extension CreateNotesVC {
     private func setupUI() {
         navigationController?.navigationBar.isTranslucent = true
@@ -103,16 +103,16 @@ extension CreateNotesVC {
     }
 }
 
-//MARK: - CreateNotesPresenterDelegate
-extension CreateNotesVC : CreateNotesPresenterDelegate {
+// MARK: - CreateNotesPresenterDelegate
+extension CreateNotesVC: CreateNotesPresenterDelegate {
     func presentActionForSaveNotes(_ CreateNotesPresenter: CreateNotesPresenter) {
         let newNotes = Note(context: presenter.cdm.accessContext())
         newNotes.title = notesTitle.text
         newNotes.text = notesText.text
         newNotes.cellColor = selectColor
-        
+
         presenter.saveNotes(newNotes)
-        
+
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
         print("New Notes Saved")
         self.navigationController?.popToRootViewController(animated: true)

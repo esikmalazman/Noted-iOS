@@ -42,7 +42,7 @@ final class CoreDataManager {
         }
 
     }
-    
+
     func accessContext() -> NSManagedObjectContext {
         return context
     }

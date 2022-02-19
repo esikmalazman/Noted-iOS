@@ -7,22 +7,22 @@
 
 import Foundation
 
-protocol CreateNotesPresenterDelegate : AnyObject {
+protocol CreateNotesPresenterDelegate: AnyObject {
     func presentActionForSaveNotes(_ CreateNotesPresenter: CreateNotesPresenter)
 }
 
 final class CreateNotesPresenter {
-    
-    weak var delegate : CreateNotesPresenterDelegate?
-    
+
+    weak var delegate: CreateNotesPresenterDelegate?
+
     let cdm = CoreDataManager()
-    
-    func saveNotes(_ object : Note) {
+
+    func saveNotes(_ object: Note) {
         cdm.saveObjectContext(object)
     }
-    
+
     func didTapSaveNotes() {
         delegate?.presentActionForSaveNotes(self)
     }
-    
+
 }
