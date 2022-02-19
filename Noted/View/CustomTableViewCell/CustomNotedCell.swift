@@ -17,27 +17,35 @@ final class CustomNotedCell: UITableViewCell {
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCustomCell()
-
     }
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        customCellSpace()
+        setupCellPadding()
+        setupCustomCell()
+    }
+
+    func configureCell(withData data: Note) {
+        titleCell.text = data.title
+        subtitleCell.text = data.text
+        cellBg.backgroundColor = data.cellColor
     }
 }
 
 // MARK: - Private methods
 extension CustomNotedCell {
     private func setupCustomCell() {
+        selectionStyle = .none
+
         cellBg.layer.cornerRadius = 10
         cellBg.layer.masksToBounds = true
         titleCell.textColor = Constants.BrandColor.notesColor
         subtitleCell.textColor = Constants.BrandColor.subtitleNotesColor
-
     }
 
-    private func customCellSpace() {
+    private func setupCellPadding() {
         let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
         contentView.frame = contentView.frame.inset(by: margins)
     }
+
 }
