@@ -6,46 +6,29 @@
 //
 
 import UIKit
-import CoreData
 
 final class CreateNotesVC: UIViewController {
-    // MARK: - Outlets
+    // MARK: - Outlets˜
     @IBOutlet weak var notesTitle: UITextField!
     @IBOutlet weak var notesText: UITextView!
     @IBOutlet weak var saveBtn: UIBarButtonItem!
 
     // MARK: - Variables
     var selectColor: UIColor = Constants.BrandColor.bgColor!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let presenter = CreateNotesPresenter()
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToolBar()
         setupUI()
+        presenter.delegate = self
     }
     // MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         // Notify baseVC that new notes added
         // NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
-        addNewNotes()
-        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
-        print("New Notes Saved")
-        saveNotes()
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-}
-
-// MARK: - Data Manipulation
-extension CreateNotesVC {
-    func saveNotes() {
-
-        do {
-            try context.save()
-
-        } catch {
-            print("Error saving context \(error.localizedDescription)")
-        }
+        presenter.didTapSaveNotes()
     }
 }
 
@@ -91,7 +74,7 @@ extension CreateNotesVC: UITextViewDelegate {
         }
     }
 }
-
+// MARK: - Private methods
 extension CreateNotesVC {
     private func setupUI() {
         navigationController?.navigationBar.isTranslucent = true
@@ -111,17 +94,27 @@ extension CreateNotesVC {
         UITextView.appearance().tintColor = Constants.BrandColor.cursorColor
     }
     private func setupToolBar() {
-        guard let custom = UINib(nibName: "CustomToolBar", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
+        guard let custom = UINib(nibName: XIBName.CustomToolBar.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil).first as? CustomToolbar else {return}
         custom.sizeToFit()
         custom.customDelegate = self
 
         notesTitle.inputAccessoryView = custom
         notesText.inputAccessoryView = custom
     }
-    private func addNewNotes() {
-        let newNotes = Note(context: context)
+}
+
+// MARK: - CreateNotesPresenterDelegate
+extension CreateNotesVC: CreateNotesPresenterDelegate {
+    func presentActionForSaveNotes(_ CreateNotesPresenter: CreateNotesPresenter) {
+        let newNotes = Note(context: presenter.cdm.accessContext())
         newNotes.title = notesTitle.text
         newNotes.text = notesText.text
         newNotes.cellColor = selectColor
+
+        presenter.saveNotes(newNotes)
+
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
+        print("New Notes Saved")
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }

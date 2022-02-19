@@ -23,7 +23,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeNotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="112.5"/>
         </scene>
-        <!--View NotesVC-->
+        <!--Notes DetailsVC-->
         <scene sceneID="Exg-Xd-0YQ">
             <objects>
-                <viewController id="w3f-jy-Dq8" customClass="ViewNotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w3f-jy-Dq8" customClass="NotesDetailsVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" misplaced="YES" id="TBF-hI-R6v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

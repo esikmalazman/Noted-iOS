@@ -9,4 +9,5 @@ import Foundation
 
 enum XIBName: String {
     case CustomToolBar
+    case CustomNotedCell
 }
