@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-final class ViewNotesVC: UIViewController {
+final class NotesDetailsVC: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var viewTitle: UITextField!
@@ -42,7 +42,7 @@ final class ViewNotesVC: UIViewController {
 }
 
 // MARK: - CustomToolbar Delegate
-extension ViewNotesVC: CustomToolBarDelegate {
+extension NotesDetailsVC: CustomToolBarDelegate {
     func didSetBackgroundColor(view: Any, with color: UIColor) {
         self.view.backgroundColor = color
         viewTitle.backgroundColor = color
@@ -51,7 +51,7 @@ extension ViewNotesVC: CustomToolBarDelegate {
 }
 
 // MARK: - UITextField Delegate
-extension ViewNotesVC: UITextFieldDelegate {
+extension NotesDetailsVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         editButton.title = "Save"
     }
@@ -63,14 +63,14 @@ extension ViewNotesVC: UITextFieldDelegate {
 }
 
 // MARK: - UITextView Delegate
-extension ViewNotesVC: UITextViewDelegate {
+extension NotesDetailsVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         editButton.title = "Save"
     }
 }
 
 // MARK: - Data Manipulation Methods
-extension ViewNotesVC {
+extension NotesDetailsVC {
 
     func updateNotes(with title: String, newTitle: String, newText: String, newColor: UIColor) {
         // attributesName, arguements
@@ -103,7 +103,7 @@ extension ViewNotesVC {
 }
 
 // MARK: - Private methods
-extension ViewNotesVC {
+extension NotesDetailsVC {
     private func setupView() {
         viewTitle.text = notesTitle
         viewText.text = notesText
