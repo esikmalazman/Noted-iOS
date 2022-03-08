@@ -37,18 +37,17 @@ final class HomeNotesVC: UIViewController {
         presenter.reloadNotes()
     }
 
-
     @IBAction func addButtonPressed(_ sender: UIButton) {
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
         // Navigate to NotesVC
         // guard let notesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NotesVC") as? NotesVC else {return}
         // self.navigationController?.pushViewController(notesVC, animated: true)
     }
-    
-    func deleteNotes(at indexPath : IndexPath, with rowAnimation : UITableView.RowAnimation = .left) {
+
+    func deleteNotes(at indexPath: IndexPath, with rowAnimation: UITableView.RowAnimation = .left) {
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.deleteNotes)
         arrayNotes.remove(at: indexPath.row)
-        
+
         DispatchQueue.main.async {
             self.tableView.deleteRows(at: [indexPath], with: rowAnimation)
         }
@@ -77,11 +76,11 @@ extension HomeNotesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
- 
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let objectToDelete = arrayNotes[indexPath.row]

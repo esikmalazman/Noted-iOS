@@ -29,12 +29,12 @@ final class HomeNotesPresenter {
             case .success(let data):
                 debugPrint("Succes Fetch Data from context : \(data)")
                 var notes = data as! [Note]
-                
+
                 for note in notes {
                     note.noteColor = note.cellColor?.toHex
                     debugPrint("Note : \(note.noteColor!)")
                 }
-                
+
                 DispatchQueue.main.async {
                     self?.delegate?.presentFetchNotesWhenSuccess(self!, data: notes)
                 }

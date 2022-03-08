@@ -111,7 +111,7 @@ extension CreateNotesVC: CreateNotesPresenterDelegate {
         newNotes.text = notesText.text
         newNotes.cellColor = selectColor
         newNotes.noteColor = selectColor.toHex
-        
+
         presenter.saveNotes(newNotes)
 
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)

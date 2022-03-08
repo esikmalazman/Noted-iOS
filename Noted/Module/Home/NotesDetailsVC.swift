@@ -41,7 +41,7 @@ final class NotesDetailsVC: UIViewController {
         selectedNote?.text = newText
         selectedNote?.cellColor = newColor
         selectedNote?.noteColor = newColor.toHex
-        
+
         presenter.saveNotes(selectedNote!)
     }
 }
@@ -82,7 +82,7 @@ extension NotesDetailsVC {
 
         viewTitle.textColor = Constants.BrandColor.notesColor
         viewText.textColor = Constants.BrandColor.notesColor
-        
+
         view.backgroundColor = UIColor(hex: notesBgColor!)
         viewTitle.backgroundColor = UIColor(hex: notesBgColor!)
         viewText.backgroundColor = UIColor(hex: notesBgColor!)
