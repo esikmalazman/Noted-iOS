@@ -28,7 +28,9 @@ final class CustomNotedCell: UITableViewCell {
     func configureCell(withData data: Note) {
         titleCell.text = data.title
         subtitleCell.text = data.text
-        cellBg.backgroundColor = data.cellColor
+        if let noteColor = data.noteColor {
+            cellBg.backgroundColor = UIColor(hex: noteColor)
+        }
     }
 }
 
