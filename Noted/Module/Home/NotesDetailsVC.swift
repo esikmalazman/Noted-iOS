@@ -18,7 +18,7 @@ final class NotesDetailsVC: UIViewController {
     // MARK: - Variables
     var notesTitle: String?
     var notesText: String?
-    var notesBgColor: UIColor?
+    var notesBgColor: String?
     var selectedNote: Note?
 
     private let presenter = NotesDetailsPresenter()
@@ -40,6 +40,7 @@ final class NotesDetailsVC: UIViewController {
         selectedNote?.title = newTitle
         selectedNote?.text = newText
         selectedNote?.cellColor = newColor
+        selectedNote?.noteColor = newColor.toHex
 
         presenter.saveNotes(selectedNote!)
     }
@@ -82,9 +83,9 @@ extension NotesDetailsVC {
         viewTitle.textColor = Constants.BrandColor.notesColor
         viewText.textColor = Constants.BrandColor.notesColor
 
-        view.backgroundColor = notesBgColor
-        viewTitle.backgroundColor = notesBgColor
-        viewText.backgroundColor = notesBgColor
+        view.backgroundColor = UIColor(hex: notesBgColor!)
+        viewTitle.backgroundColor = UIColor(hex: notesBgColor!)
+        viewText.backgroundColor = UIColor(hex: notesBgColor!)
 
         viewText.delegate = self
         viewTitle.delegate = self
