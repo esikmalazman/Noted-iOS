@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Noted
 //
-//  Created by Ikmal Azman on 19/06/2021.
+//  Created by Ikmal Azman on 08/03/2022.
 //
 //
 
@@ -16,12 +16,13 @@ extension Note {
         return NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var text: String?
     @NSManaged public var cellColor: UIColor?
+    @NSManaged public var text: String?
+    @NSManaged public var title: String?
+    @NSManaged public var noteColor: String?
 
 }
 
-extension Note: Identifiable {
+extension Note : Identifiable {
 
 }
