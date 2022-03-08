@@ -5,7 +5,7 @@
 //  Created by Ikmal Azman on 08/03/2022.
 //
 
-import UIKit
+import UIKit.UIColor
 
 extension UIColor {
     /// Convert Hexcolor to UIColor
