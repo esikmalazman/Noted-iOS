@@ -37,11 +37,21 @@ final class HomeNotesVC: UIViewController {
         presenter.reloadNotes()
     }
 
+
     @IBAction func addButtonPressed(_ sender: UIButton) {
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
         // Navigate to NotesVC
         // guard let notesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NotesVC") as? NotesVC else {return}
         // self.navigationController?.pushViewController(notesVC, animated: true)
+    }
+    
+    func deleteNotes(at indexPath : IndexPath, with rowAnimation : UITableView.RowAnimation = .left) {
+        SoundManager.shared.playSound(soundFileName: Constants.SoundFile.deleteNotes)
+        arrayNotes.remove(at: indexPath.row)
+        
+        DispatchQueue.main.async {
+            self.tableView.deleteRows(at: [indexPath], with: rowAnimation)
+        }
     }
 }
 
@@ -61,24 +71,23 @@ extension HomeNotesVC: UITableViewDelegate {
 
         destinationVC.notesTitle = arrayNotes[indexPath.row].title
         destinationVC.notesText = arrayNotes[indexPath.row].text
-        destinationVC.notesBgColor = arrayNotes[indexPath.row].cellColor
+        destinationVC.notesBgColor = arrayNotes[indexPath.row].noteColor
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, _)  in
-
-            guard let notesToRemove = self?.arrayNotes[indexPath.row] else {return}
-
-            self?.presenter.deleteNotes(notesToRemove)
-            self?.tableView.reloadData()
-            SoundManager.shared.playSound(soundFileName: Constants.SoundFile.deleteNotes)
-
+ 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let objectToDelete = arrayNotes[indexPath.row]
+            presenter.deleteNotes(objectToDelete)
+            deleteNotes(at: indexPath)
         }
-        return UISwipeActionsConfiguration(actions: [action])
     }
 }
 
@@ -138,8 +147,13 @@ extension HomeNotesVC: HomeNotesPresenterDelegate {
         arrayNotes = data
         tableView.reloadData()
     }
-    #warning("Add UIAlert here")
-    func presentFetchNotesWithError(_ HomeNotesPresenter: HomeNotesPresenter, message: String) {
 
+    func presentFetchNotesWithError(_ HomeNotesPresenter: HomeNotesPresenter, message: String) {
+        let alert = UIAlertController(title: "Crash Report", message: message, preferredStyle: .alert)
+        let sendReport = UIAlertAction(title: "Send", style: .default) { _ in}
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(sendReport)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
     }
 }
