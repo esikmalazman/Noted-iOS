@@ -38,6 +38,7 @@
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
 		7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2399827BFC43100FFEE0D /* XIBName.swift */; };
+		7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD6F11827D8833B007D13D6 /* CloudKit.framework */; };
 		7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF85DCE267E171D00905755 /* CustomNotedCell.swift */; };
 		7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF85DCF267E171D00905755 /* CustomNotedCell.xib */; };
 		BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */; };
@@ -81,6 +82,7 @@
 		7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
 		7FD2399827BFC43100FFEE0D /* XIBName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBName.swift; sourceTree = "<group>"; };
+		7FD6F11827D8833B007D13D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7FF85DCE267E171D00905755 /* CustomNotedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotedCell.swift; sourceTree = "<group>"; };
 		7FF85DCF267E171D00905755 /* CustomNotedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNotedCell.xib; sourceTree = "<group>"; };
 		ED909F6D01C22311C201A3DC /* Pods-Noted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noted.release.xcconfig"; path = "Target Support Files/Pods-Noted/Pods-Noted.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */,
+				7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 		0619B814F007081BDB31CCDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FD6F11827D8833B007D13D6 /* CloudKit.framework */,
 				7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */,
 			);
 			name = Frameworks;
