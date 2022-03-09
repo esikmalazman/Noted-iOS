@@ -9,8 +9,6 @@ import UIKit
 
 struct Constants {
 
-    static var accessObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
     static let cellIdentifierNote = "noteCell"
     static let customCellIdentifierNote = "customNoteCell"
     static let goToNoteSegue = "goToNote"

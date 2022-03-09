@@ -9,7 +9,7 @@ import CoreData
 
 final class CoreDataManager {
 
-    private let context = Constants.accessObjectContext
+    private let context = AppDelegate.viewContext
 
     func saveObjectContext(_ object: NSManagedObject, completion : @escaping (() -> Void) = {}) {
         do {
