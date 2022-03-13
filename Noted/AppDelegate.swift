@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import Firebase
+import AppTrackingTransparency
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupNavigationBarAppearance()
         FirebaseApp.configure()
 
-        UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+       // UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         return true
     }
 
@@ -28,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        setupAppTrackingTransparency()
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
@@ -108,6 +113,24 @@ private extension AppDelegate {
             appearance.configureWithOpaqueBackground()
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
+    }
+
+    func setupAppTrackingTransparency() {
+        notificationHandler {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                if #available(iOS 14, *) {
+                    ATTrackingManager.requestTrackingAuthorization { _ in}
+                }
+            }
+        }
+
+    }
+
+    func notificationHandler(_ completion : @escaping (() -> Void)) {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in
+            completion()
         }
     }
 }
