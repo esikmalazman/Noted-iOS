@@ -8,14 +8,14 @@
 import Foundation
 import Firebase
 
-final class FirebaseAnalyticsEngine : AnalyticsEngine {
-    
+final class FirebaseAnalyticsEngine: AnalyticsEngine {
+
     private let database = Analytics.self
-    
-    func sendAnalyticsEvent(named name: String, metadata: [String : String]) {
+
+    func sendAnalyticsEvent(named name: String, metadata: [String: String]) {
 
         for (key, value) in metadata {
-            database.logEvent(name, parameters: [key : value])
+            database.logEvent(name, parameters: [key: value])
         }
     }
 }

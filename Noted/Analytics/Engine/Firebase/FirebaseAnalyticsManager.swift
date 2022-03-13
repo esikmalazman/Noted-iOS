@@ -9,12 +9,12 @@ import Foundation
 /// Provide an API to log given event
 final class FirebaseAnalyticsManager {
     private let engine: AnalyticsEngine
-    
-    init(engine : AnalyticsEngine) {
+
+    init(engine: AnalyticsEngine) {
         self.engine = engine
     }
-    
-    func log(_ event  : AnalyticsEvent) {
+
+    func log(_ event: AnalyticsEvent) {
         engine.sendAnalyticsEvent(named: event.name, metadata: event.metadata)
     }
 }

@@ -12,22 +12,22 @@ enum AnalyticsEvent {
     case listOfNoteScreenViewed
     case noteDetailsScreenViewed
     case createNoteScreenViewed
-    
-    case colorSelected(selected :Bool)
+
+    case colorSelected(selected: Bool)
     case textAdded
-    
+
     case noteCreated
     case noteSaved
-    case noteDeleted(index : Int)
-    case noteRead(index : Int)
-    
+    case noteDeleted(index: Int)
+    case noteRead(index: Int)
+
     case appScreenOpened
     case appScreenDissapeared
 }
 
 /// Serialize events value for engine consumption
 extension AnalyticsEvent {
-    var name : String {
+    var name: String {
         switch self {
         case .listOfNoteScreenViewed:
             return "list_of_note_screen_viewed"
@@ -57,33 +57,32 @@ extension AnalyticsEvent {
 
 /// Convert enum value to dictionary
 extension AnalyticsEvent {
-    var metadata : [String: String] {
+    var metadata: [String: String] {
         switch self {
         case .listOfNoteScreenViewed:
-            return ["list_of_note_screen_viewed" : "1"]
+            return ["list_of_note_screen_viewed": "1"]
         case .noteDetailsScreenViewed:
-            return ["note_details_screen_viewed" : "1"]
+            return ["note_details_screen_viewed": "1"]
         case .createNoteScreenViewed:
-            return ["create_note_screen_viewed" : "1"]
-            
+            return ["create_note_screen_viewed": "1"]
+
         case .colorSelected(let selected):
-            return ["color_selected" : "\(selected)"]
+            return ["color_selected": "\(selected)"]
         case .noteDeleted(let index):
-            return ["note_deleted" : "\(index)"]
+            return ["note_deleted": "\(index)"]
         case .noteRead(let index):
-            return ["note_read":"\(index)"]
+            return ["note_read": "\(index)"]
         case .textAdded:
-            return ["text_added" : "1"]
+            return ["text_added": "1"]
         case .noteCreated:
-            return ["note_created" : "1"]
+            return ["note_created": "1"]
         case .noteSaved:
-            return ["note_saved" : "1"]
+            return ["note_saved": "1"]
         case .appScreenOpened:
-            return ["app_screen_open" : "1"]
+            return ["app_screen_open": "1"]
         case .appScreenDissapeared:
-            return ["app_screen_dissapearedd" : "1"]
-            
-            
+            return ["app_screen_dissapearedd": "1"]
+
         }
     }
 }

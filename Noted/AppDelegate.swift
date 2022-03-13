@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKeyboardManager()
         setupNavigationBarAppearance()
         FirebaseApp.configure()
-        
+
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         return true
     }
