@@ -22,7 +22,7 @@
 		7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */; };
 		7F793DB9267F37E100AAE31E /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB5267F37E100AAE31E /* Montserrat-SemiBold.ttf */; };
 		7F7DFFEB27C06B970072DCEE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFEA27C06B970072DCEE /* CoreDataManager.swift */; };
-		7F7DFFED27C06EAF0072DCEE /* HomeNotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */; };
+		7F7DFFED27C06EAF0072DCEE /* ListOfNotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFEC27C06EAF0072DCEE /* ListOfNotesPresenter.swift */; };
 		7F7DFFF127C07DAD0072DCEE /* CreateNotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFF027C07DAD0072DCEE /* CreateNotesPresenter.swift */; };
 		7F7DFFF327C0828B0072DCEE /* NotesDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DFFF227C0828B0072DCEE /* NotesDetailsPresenter.swift */; };
 		7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4232267DD8910066B816 /* AppDelegate.swift */; };
@@ -71,7 +71,7 @@
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		7F793DB5267F37E100AAE31E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F7DFFEA27C06B970072DCEE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesPresenter.swift; sourceTree = "<group>"; };
+		7F7DFFEC27C06EAF0072DCEE /* ListOfNotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfNotesPresenter.swift; sourceTree = "<group>"; };
 		7F7DFFF027C07DAD0072DCEE /* CreateNotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotesPresenter.swift; sourceTree = "<group>"; };
 		7F7DFFF227C0828B0072DCEE /* NotesDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailsPresenter.swift; sourceTree = "<group>"; };
 		7F8E422F267DD8910066B816 /* Noted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noted.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8E4236267DD8910066B816 /* ListOfNotesVC.swift */,
-				7F7DFFEC27C06EAF0072DCEE /* HomeNotesPresenter.swift */,
+				7F7DFFEC27C06EAF0072DCEE /* ListOfNotesPresenter.swift */,
 				7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */,
 				7F7DFFF027C07DAD0072DCEE /* CreateNotesPresenter.swift */,
 				7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */,
@@ -530,7 +530,7 @@
 				7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */,
 				7F61899C27D75F9D009B1EB7 /* Note+CoreDataProperties.swift in Sources */,
 				7FC1AABA27DD80ED00FEFD78 /* FirebaseAnalyticsEngine.swift in Sources */,
-				7F7DFFED27C06EAF0072DCEE /* HomeNotesPresenter.swift in Sources */,
+				7F7DFFED27C06EAF0072DCEE /* ListOfNotesPresenter.swift in Sources */,
 				7F7DFFF127C07DAD0072DCEE /* CreateNotesPresenter.swift in Sources */,
 				7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */,
 				7FC1AAB627DD7FCE00FEFD78 /* AnalyticsEngine.swift in Sources */,

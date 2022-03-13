@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol HomeNotesPresenterDelegate: AnyObject {
-    func presentFetchNotesWhenSuccess(_ HomeNotesPresenter: HomeNotesPresenter, data: [Note] )
-    func presentFetchNotesWithError(_ HomeNotesPresenter: HomeNotesPresenter, message: String)
+protocol ListOfNotesPresenterDelegate: AnyObject {
+    func presentFetchNotesWhenSuccess(_ HomeNotesPresenter: ListOfNotesPresenter, data: [Note] )
+    func presentFetchNotesWithError(_ HomeNotesPresenter: ListOfNotesPresenter, message: String)
 }
 
-final class HomeNotesPresenter {
+final class ListOfNotesPresenter {
 
-    weak var delegate: HomeNotesPresenterDelegate?
+    weak var delegate: ListOfNotesPresenterDelegate?
 
     private let cdm = CoreDataManager()
 

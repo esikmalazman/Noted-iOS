@@ -16,6 +16,7 @@ final class CreateNotesVC: UIViewController {
     // MARK: - Variables
     var selectColor: UIColor = Constants.BrandColor.bgColor!
     private let presenter = CreateNotesPresenter()
+    private let analytics = FirebaseAnalyticsManager(engine: FirebaseAnalyticsEngine())
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -24,11 +25,17 @@ final class CreateNotesVC: UIViewController {
         setupUI()
         presenter.delegate = self
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        analytics.log(.createNoteScreenViewed)
+    }
     // MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         // Notify baseVC that new notes added
         // NotificationCenter.default.post(name: NSNotification.Name("loadTableView"), object: nil)
         presenter.didTapSaveNotes()
+        analytics.log(.noteSaved)
     }
 }
 
@@ -48,6 +55,8 @@ extension CreateNotesVC: CustomToolBarDelegate {
         self.view.backgroundColor = color
         saveBtn.isEnabled = true
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.tapToolBarColor)
+
+        analytics.log(.colorSelected(selected: true))
     }
 }
 
@@ -55,6 +64,7 @@ extension CreateNotesVC: CustomToolBarDelegate {
 extension CreateNotesVC: UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        analytics.log(.textAdded)
         if textField.text == "Title" {
             textField.text = ""
         }
@@ -69,6 +79,7 @@ extension CreateNotesVC: UITextFieldDelegate {
 // MARK: - UITextViewDelegate
 extension CreateNotesVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        analytics.log(.textAdded)
         if textView.text == "Type something.."{
             textView.text = ""
         }
