@@ -22,6 +22,7 @@ final class NotesDetailsVC: UIViewController {
     var selectedNote: Note?
 
     private let presenter = NotesDetailsPresenter()
+    private let analytics = FirebaseAnalyticsManager(engine: FirebaseAnalyticsEngine())
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -30,6 +31,11 @@ final class NotesDetailsVC: UIViewController {
         setupToolBar()
         presenter.delegate = self
         presenter.fetchNote(withTitle: notesTitle!)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        analytics.log(.noteDetailsScreenViewed)
     }
     // MARK: - Actions
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
@@ -43,12 +49,14 @@ final class NotesDetailsVC: UIViewController {
         selectedNote?.noteColor = newColor.toHex
 
         presenter.saveNotes(selectedNote!)
+        analytics.log(.noteSaved)
     }
 }
 
 // MARK: - CustomToolbar Delegate
 extension NotesDetailsVC: CustomToolBarDelegate {
     func didSetBackgroundColor(view: Any, with color: UIColor) {
+        analytics.log(.colorSelected(selected: true))
         self.view.backgroundColor = color
         viewTitle.backgroundColor = color
         viewText.backgroundColor = color
@@ -58,6 +66,7 @@ extension NotesDetailsVC: CustomToolBarDelegate {
 // MARK: - UITextField Delegate
 extension NotesDetailsVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        analytics.log(.textAdded)
         editButton.title = "Save"
     }
 

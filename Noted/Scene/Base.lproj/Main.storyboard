@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home NotesVC-->
+        <!--List Of NotesVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeNotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListOfNotesVC" customModule="Noted" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" misplaced="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

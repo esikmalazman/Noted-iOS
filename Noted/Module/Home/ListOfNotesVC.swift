@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeNotesVC: UIViewController {
+final class ListOfNotesVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var baseTitle: UILabel!
     @IBOutlet weak var baseSubtitle: UILabel!
@@ -16,10 +16,12 @@ final class HomeNotesVC: UIViewController {
 
     // MARK: - Variables
     private var arrayNotes = [Note]()
-    private let presenter = HomeNotesPresenter()
+    private let presenter = ListOfNotesPresenter()
+    private let analytics = FirebaseAnalyticsManager(engine: FirebaseAnalyticsEngine())
 
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
+        analytics.log(.listOfNoteScreenViewed)
         self.navigationController?.isNavigationBarHidden = true
         guard arrayNotes.count < 0  else {return presenter.reloadNotes()}
     }
@@ -39,12 +41,15 @@ final class HomeNotesVC: UIViewController {
 
     @IBAction func addButtonPressed(_ sender: UIButton) {
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
+        analytics.log(.noteCreated)
         // Navigate to NotesVC
         // guard let notesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NotesVC") as? NotesVC else {return}
         // self.navigationController?.pushViewController(notesVC, animated: true)
     }
 
     func deleteNotes(at indexPath: IndexPath, with rowAnimation: UITableView.RowAnimation = .left) {
+        analytics.log(.noteDeleted(index: indexPath.row))
+
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.deleteNotes)
         arrayNotes.remove(at: indexPath.row)
 
@@ -55,12 +60,13 @@ final class HomeNotesVC: UIViewController {
 }
 
 // MARK: - Table Delegate
-extension HomeNotesVC: UITableViewDelegate {
+extension ListOfNotesVC: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.goToNoteSegue, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.createNotes)
+        analytics.log(.noteRead(index: indexPath.row))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,7 +97,7 @@ extension HomeNotesVC: UITableViewDelegate {
 }
 
 // MARK: - Table Datasource
-extension HomeNotesVC: UITableViewDataSource {
+extension ListOfNotesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if arrayNotes.isEmpty {
             tableView.setEmptyMessage("You haven't created any notes yet", Constants.BrandColor.mainFontColor ?? .black)
@@ -114,7 +120,7 @@ extension HomeNotesVC: UITableViewDataSource {
 }
 
 // MARK: - Private methods
-extension HomeNotesVC {
+extension ListOfNotesVC {
     private func setupUI() {
 
         setupTableView()
@@ -140,14 +146,14 @@ extension HomeNotesVC {
 }
 
 // MARK: - HomeNotesPresenterDelegate
-extension HomeNotesVC: HomeNotesPresenterDelegate {
-    func presentFetchNotesWhenSuccess(_ HomeNotesPresenter: HomeNotesPresenter, data: [Note]) {
+extension ListOfNotesVC: ListOfNotesPresenterDelegate {
+    func presentFetchNotesWhenSuccess(_ HomeNotesPresenter: ListOfNotesPresenter, data: [Note]) {
 
         arrayNotes = data
         tableView.reloadData()
     }
 
-    func presentFetchNotesWithError(_ HomeNotesPresenter: HomeNotesPresenter, message: String) {
+    func presentFetchNotesWithError(_ HomeNotesPresenter: ListOfNotesPresenter, message: String) {
         let alert = UIAlertController(title: "Crash Report", message: message, preferredStyle: .alert)
         let sendReport = UIAlertAction(title: "Send", style: .default) { _ in}
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
