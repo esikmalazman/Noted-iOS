@@ -22,7 +22,7 @@ Noted taking apps with amazing sound design for iOS/iPadOS
 2. AVFoudation Framework to play sound from project file
 3. Singleton pattern to make it shareable and accessible by any class
 4. Delegate as communication pattern between classes 
-5. Develop with MVC Architecture
+5. Develop with MVP Architecture
 6. Design Custom toolbar and tableview cell with .xib
 7. Use constants files to store string, brand colors
 8. Utilise extension to separate delegate method (Clean Code)
