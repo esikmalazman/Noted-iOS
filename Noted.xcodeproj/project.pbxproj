@@ -13,10 +13,7 @@
 		7F036F7B2680D07100A684C9 /* create-notes-swoosh-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */; };
 		7F036F802680D2FB00A684C9 /* tap-toolbar-color-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */; };
 		7F0552052693054F00ED7A47 /* noted-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0552042693054F00ED7A47 /* noted-icon.png */; };
-		7F260DC727D735E500723D48 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F260DC627D735E500723D48 /* UIColor + Extensions.swift */; };
 		7F4A35F2269AF93500DF75E7 /* UITableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A35F1269AF93500DF75E7 /* UITableView + Extensions.swift */; };
-		7F61899B27D75F9D009B1EB7 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61899927D75F9D009B1EB7 /* Note+CoreDataClass.swift */; };
-		7F61899C27D75F9D009B1EB7 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61899A27D75F9D009B1EB7 /* Note+CoreDataProperties.swift */; };
 		7F793DB6267F37E100AAE31E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */; };
 		7F793DB7267F37E100AAE31E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */; };
 		7F793DB8267F37E100AAE31E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */; };
@@ -33,12 +30,13 @@
 		7F8E423F267DD8920066B816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F8E423E267DD8920066B816 /* Assets.xcassets */; };
 		7F8E4242267DD8920066B816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8E4240267DD8920066B816 /* LaunchScreen.storyboard */; };
 		7F8E424C267DD9250066B816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E424B267DD9250066B816 /* Constants.swift */; };
+		7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */; };
+		7F8E4256267DDC680066B816 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */; };
 		7FA12F0F267DE325004A1A4A /* CreateNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */; };
 		7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */; };
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
 		7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2399827BFC43100FFEE0D /* XIBName.swift */; };
-		7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD6F11827D8833B007D13D6 /* CloudKit.framework */; };
 		7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF85DCE267E171D00905755 /* CustomNotedCell.swift */; };
 		7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF85DCF267E171D00905755 /* CustomNotedCell.xib */; };
 		BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */; };
@@ -53,12 +51,8 @@
 		7F036F7A2680D07100A684C9 /* create-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "create-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
 		7F036F7F2680D2FB00A684C9 /* tap-toolbar-color-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tap-toolbar-color-sound.wav"; sourceTree = "<group>"; };
 		7F0552042693054F00ED7A47 /* noted-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noted-icon.png"; sourceTree = "<group>"; };
-		7F260DC627D735E500723D48 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		7F2B6C0226824A3D00B69644 /* Noted.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Noted.entitlements; sourceTree = "<group>"; };
 		7F4A35F1269AF93500DF75E7 /* UITableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extensions.swift"; sourceTree = "<group>"; };
-		7F61899827D75F12009B1EB7 /* Noted 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Noted 2.xcdatamodel"; sourceTree = "<group>"; };
-		7F61899927D75F9D009B1EB7 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		7F61899A27D75F9D009B1EB7 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		7F793DB2267F37E100AAE31E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7F793DB3267F37E100AAE31E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7F793DB4267F37E100AAE31E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -77,12 +71,13 @@
 		7F8E4241267DD8920066B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F8E4243267DD8920066B816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F8E424B267DD9250066B816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7FA12F0E267DE325004A1A4A /* CreateNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotesVC.swift; sourceTree = "<group>"; };
 		7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailsVC.swift; sourceTree = "<group>"; };
 		7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
 		7FD2399827BFC43100FFEE0D /* XIBName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBName.swift; sourceTree = "<group>"; };
-		7FD6F11827D8833B007D13D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7FF85DCE267E171D00905755 /* CustomNotedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotedCell.swift; sourceTree = "<group>"; };
 		7FF85DCF267E171D00905755 /* CustomNotedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNotedCell.xib; sourceTree = "<group>"; };
 		ED909F6D01C22311C201A3DC /* Pods-Noted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noted.release.xcconfig"; path = "Target Support Files/Pods-Noted/Pods-Noted.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */,
-				7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +98,6 @@
 		0619B814F007081BDB31CCDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FD6F11827D8833B007D13D6 /* CloudKit.framework */,
 				7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */,
 			);
 			name = Frameworks;
@@ -247,9 +240,9 @@
 		7FD2399527BFC35D00FFEE0D /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				7F61899927D75F9D009B1EB7 /* Note+CoreDataClass.swift */,
-				7F61899A27D75F9D009B1EB7 /* Note+CoreDataProperties.swift */,
 				7F7DFFEE27C0780C0072DCEE /* Manager */,
+				7F8E4254267DDC680066B816 /* Note+CoreDataProperties.swift */,
+				7F8E4253267DDC680066B816 /* Note+CoreDataClass.swift */,
 				7F8E423B267DD8910066B816 /* Noted.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -259,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				7F4A35F1269AF93500DF75E7 /* UITableView + Extensions.swift */,
-				7F260DC627D735E500723D48 /* UIColor + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,22 +436,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8E424C267DD9250066B816 /* Constants.swift in Sources */,
+				7F8E4256267DDC680066B816 /* Note+CoreDataProperties.swift in Sources */,
 				7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */,
 				7F7DFFEB27C06B970072DCEE /* CoreDataManager.swift in Sources */,
 				7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */,
 				7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */,
 				7FA12F0F267DE325004A1A4A /* CreateNotesVC.swift in Sources */,
 				7F036F782680CE2400A684C9 /* SoundManager.swift in Sources */,
-				7F260DC727D735E500723D48 /* UIColor + Extensions.swift in Sources */,
 				7F8E423D267DD8910066B816 /* Noted.xcdatamodeld in Sources */,
 				7F8E4237267DD8910066B816 /* HomeNotesVC.swift in Sources */,
+				7F8E4255267DDC680066B816 /* Note+CoreDataClass.swift in Sources */,
 				7F8E4233267DD8910066B816 /* AppDelegate.swift in Sources */,
 				7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */,
-				7F61899C27D75F9D009B1EB7 /* Note+CoreDataProperties.swift in Sources */,
 				7F7DFFED27C06EAF0072DCEE /* HomeNotesPresenter.swift in Sources */,
 				7F7DFFF127C07DAD0072DCEE /* CreateNotesPresenter.swift in Sources */,
 				7F8E4235267DD8910066B816 /* SceneDelegate.swift in Sources */,
-				7F61899B27D75F9D009B1EB7 /* Note+CoreDataClass.swift in Sources */,
 				7F4A35F2269AF93500DF75E7 /* UITableView + Extensions.swift in Sources */,
 				7F7DFFF327C0828B0072DCEE /* NotesDetailsPresenter.swift in Sources */,
 			);
@@ -611,7 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -619,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -636,7 +627,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Noted/Noted.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = Noted/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -644,7 +635,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.esikmalazman.Noted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -680,10 +671,9 @@
 		7F8E423B267DD8910066B816 /* Noted.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7F61899827D75F12009B1EB7 /* Noted 2.xcdatamodel */,
 				7F8E423C267DD8910066B816 /* Noted.xcdatamodel */,
 			);
-			currentVersion = 7F61899827D75F12009B1EB7 /* Noted 2.xcdatamodel */;
+			currentVersion = 7F8E423C267DD8910066B816 /* Noted.xcdatamodel */;
 			path = Noted.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -110,13 +110,11 @@ extension CreateNotesVC: CreateNotesPresenterDelegate {
         newNotes.title = notesTitle.text
         newNotes.text = notesText.text
         newNotes.cellColor = selectColor
-        newNotes.noteColor = selectColor.toHex
 
         presenter.saveNotes(newNotes)
 
         SoundManager.shared.playSound(soundFileName: Constants.SoundFile.saveNotes)
-        debugPrint("New Notes Saved")
-        debugPrint("New Notes : \(newNotes)")
+        print("New Notes Saved")
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
