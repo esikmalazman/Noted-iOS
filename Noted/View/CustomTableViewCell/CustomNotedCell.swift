@@ -28,8 +28,8 @@ final class CustomNotedCell: UITableViewCell {
     func configureCell(withData data: Note) {
         titleCell.text = data.title
         subtitleCell.text = data.text
-        if let noteColor = data.noteColor {
-            cellBg.backgroundColor = UIColor(hex: noteColor)
+        if let noteColor = data.noteColor, let uicolor = UIColor(hex: noteColor) {
+            cellBg.applyLinearGradient(color: uicolor)
         }
     }
 }
