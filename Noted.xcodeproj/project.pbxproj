@@ -37,6 +37,7 @@
 		7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */; };
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
+		7FC9B8A0285640D800C18846 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9B89F285640D800C18846 /* UIView + Extensions.swift */; };
 		7FCF4CC52856200E00719CCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCF4CC42856200E00719CCE /* IQKeyboardManagerSwift */; };
 		7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2399827BFC43100FFEE0D /* XIBName.swift */; };
 		7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD6F11827D8833B007D13D6 /* CloudKit.framework */; };
@@ -79,6 +80,7 @@
 		7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailsVC.swift; sourceTree = "<group>"; };
 		7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbar.swift; sourceTree = "<group>"; };
 		7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
+		7FC9B89F285640D800C18846 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		7FD2399827BFC43100FFEE0D /* XIBName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBName.swift; sourceTree = "<group>"; };
 		7FD6F11827D8833B007D13D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7FF85DCE267E171D00905755 /* CustomNotedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotedCell.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				7F4A35F1269AF93500DF75E7 /* UITableView + Extensions.swift */,
 				7F260DC627D735E500723D48 /* UIColor + Extensions.swift */,
+				7FC9B89F285640D800C18846 /* UIView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC9B8A0285640D800C18846 /* UIView + Extensions.swift in Sources */,
 				7F8E424C267DD9250066B816 /* Constants.swift in Sources */,
 				7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */,
 				7F7DFFEB27C06B970072DCEE /* CoreDataManager.swift in Sources */,
