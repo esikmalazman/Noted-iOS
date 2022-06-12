@@ -19,7 +19,7 @@ final class SoundManager {
         guard let url = Bundle.main.url(forResource: soundFileName, withExtension: ".wav") else {return }
 
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
 
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
