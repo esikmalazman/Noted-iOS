@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,16 +37,14 @@
 		7FA12F12267DECD8004A1A4A /* NotesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F11267DECD8004A1A4A /* NotesDetailsVC.swift */; };
 		7FA12F19267DF9CB004A1A4A /* CustomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA12F18267DF9CB004A1A4A /* CustomToolbar.swift */; };
 		7FA12F1C267DF9E9004A1A4A /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA12F1B267DF9E9004A1A4A /* CustomToolBar.xib */; };
+		7FCF4CC52856200E00719CCE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCF4CC42856200E00719CCE /* IQKeyboardManagerSwift */; };
 		7FD2399927BFC43100FFEE0D /* XIBName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2399827BFC43100FFEE0D /* XIBName.swift */; };
 		7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD6F11827D8833B007D13D6 /* CloudKit.framework */; };
 		7FF85DD0267E171D00905755 /* CustomNotedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF85DCE267E171D00905755 /* CustomNotedCell.swift */; };
 		7FF85DD1267E171D00905755 /* CustomNotedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF85DCF267E171D00905755 /* CustomNotedCell.xib */; };
-		BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		083D632F3BCEA3C1BC76FB88 /* Pods-Noted.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noted.debug.xcconfig"; path = "Target Support Files/Pods-Noted/Pods-Noted.debug.xcconfig"; sourceTree = "<group>"; };
-		7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Noted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F036F702680CCE400A684C9 /* delete-notes-swoosh-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "delete-notes-swoosh-sound.wav"; sourceTree = "<group>"; };
 		7F036F742680CDB800A684C9 /* save-notes-bell-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "save-notes-bell-sound.wav"; sourceTree = "<group>"; };
 		7F036F772680CE2400A684C9 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		7FD6F11827D8833B007D13D6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7FF85DCE267E171D00905755 /* CustomNotedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotedCell.swift; sourceTree = "<group>"; };
 		7FF85DCF267E171D00905755 /* CustomNotedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNotedCell.xib; sourceTree = "<group>"; };
-		ED909F6D01C22311C201A3DC /* Pods-Noted.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noted.release.xcconfig"; path = "Target Support Files/Pods-Noted/Pods-Noted.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE81D3D223D50B73DF014289 /* Pods_Noted.framework in Frameworks */,
 				7FD6F11927D8833B007D13D6 /* CloudKit.framework in Frameworks */,
+				7FCF4CC52856200E00719CCE /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,18 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				7FD6F11827D8833B007D13D6 /* CloudKit.framework */,
-				7329DF40D239C04D06BAA4B3 /* Pods_Noted.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6D4AE6D3C83D4BD0E0E39E32 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				083D632F3BCEA3C1BC76FB88 /* Pods-Noted.debug.xcconfig */,
-				ED909F6D01C22311C201A3DC /* Pods-Noted.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		7F036F732680CD1900A684C9 /* Sounds */ = {
@@ -185,7 +172,6 @@
 			children = (
 				7F8E4231267DD8910066B816 /* Noted */,
 				7F8E4230267DD8910066B816 /* Products */,
-				6D4AE6D3C83D4BD0E0E39E32 /* Pods */,
 				0619B814F007081BDB31CCDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -306,18 +292,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F8E4246267DD8920066B816 /* Build configuration list for PBXNativeTarget "Noted" */;
 			buildPhases = (
-				6CBE8ABB5C28A3E9957AF168 /* [CP] Check Pods Manifest.lock */,
 				7F8E422B267DD8910066B816 /* Sources */,
 				7F8E422C267DD8910066B816 /* Frameworks */,
 				7F8E422D267DD8910066B816 /* Resources */,
 				7FF85DCC267E0C0A00905755 /* SwiftLint */,
-				6AEED33E3D30F07E03B57909 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Noted;
+			packageProductDependencies = (
+				7FCF4CC42856200E00719CCE /* IQKeyboardManagerSwift */,
+			);
 			productName = Noted;
 			productReference = 7F8E422F267DD8910066B816 /* Noted.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +332,9 @@
 				Base,
 			);
 			mainGroup = 7F8E4226267DD8910066B816;
+			packageReferences = (
+				7FCF4CC32856200E00719CCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 7F8E4230267DD8910066B816 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,45 +369,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AEED33E3D30F07E03B57909 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Noted/Pods-Noted-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Noted/Pods-Noted-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Noted/Pods-Noted-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CBE8ABB5C28A3E9957AF168 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Noted-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7FF85DCC267E0C0A00905755 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,7 +556,6 @@
 		};
 		7F8E4247267DD8920066B816 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 083D632F3BCEA3C1BC76FB88 /* Pods-Noted.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -630,7 +580,6 @@
 		};
 		7F8E4248267DD8920066B816 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED909F6D01C22311C201A3DC /* Pods-Noted.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -675,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7FCF4CC32856200E00719CCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7FCF4CC42856200E00719CCE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FCF4CC32856200E00719CCE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7F8E423B267DD8910066B816 /* Noted.xcdatamodeld */ = {
